@@ -28,7 +28,7 @@
           </div>
         <% end %>
         <% if @item.featured_video_url.blank? %>
-          <div class="featured-img m-b-lg gray-2-bg"  data-image-bg-id="item_image_id"
+          <div class="featured-img cover-bg m-b-lg gray-2-bg"  data-image-bg-id="item_image_id"
             <% if @item.image.present? %> style="background-image: url(<%= @item.image_url('705x248#') %>)"<% end %>
           >
           </div>
