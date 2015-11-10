@@ -1,0 +1,168 @@
+<%= render 'refinery/blog/admin/submenu' %>
+
+<% content_for :admin_page_preview do %>
+  <%= render template: "refinery/blog/items/#{@item.view_template}", locals: {editing: true} %>
+<% end %>
+
+<% status_draft = @item.unpublished? %>
+
+<% content_for :admin_sidebar do %>
+  <div class="page-options">
+    <div class="sidebar-section">
+      <div class="sidebar-section-heading gray-5">
+        <i class="icon icon-<%= status_draft ? 'pencil' : 'publish' %>"></i> <span class="flex-1">Status: <strong><%= status_draft ? 'Draft' : 'Published' -%></strong></span>
+      </div>
+    </div>
+
+    <%= form_for [refinery, :blog_admin, @item], :html => {:class => "ajax-form auto-save", :"data-autosave" => 'false'}  do |f| -%>
+      <%= render '/refinery/admin/error_messages',
+                  :object => @item,
+                  :include_object_name => true %>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-heading">
+          <%= f.label :featured, :class => 'stripped m-b-0' do %>
+            <%= f.check_box :featured -%>
+            Featured
+          <% end %>
+        </div>
+      </div>
+      <div class="sidebar-section sidebar-date">
+        <%= f.hidden_field :published_at, :value => @item.published_at.present? ? @item.published_at.iso8601 : nil %>
+        <button class="datepicker-opener date-only" type="button" data-io-selector="#item_published_at">
+          <div class="sidebar-section-heading">
+            <i class="icon icon-calendar"></i>
+            <span class="flex-1">
+              Date: <strong class="update-date"> <%= @item.published_at.present? ? @item.published_at.strftime("%b. %e %Y") : "Choose" %></strong>
+            </span>
+            <i class="icon icon-down"></i>
+          </div>
+        </button>
+        <%= render '/glass/datepicker' %>
+      </div>
+
+      <div class="m-b-md">
+        <div class='form-group'>
+          <%= render '/refinery/admin/images/image_input',
+            :f => f,
+            :field_name => :image,
+            :image => @item.image
+          -%>
+          <%= render '/refinery/admin/images/image_preview',
+            :field_name => :image,
+            :image => @item.image,
+            :use_case => :card,
+            :preview_padding_top => '69%',
+            :title_text => "Featured Image"
+          -%>
+        </div>
+      </div>
+
+      <% if @item.story? %>
+        <div class="sidebar-section">
+          <div class="sidebar-section-body">
+            <%= f.label :featured_video_url, class: 'control-label' -%>
+            <%= f.text_field :featured_video_url, :class => 'form-control input-lg embedded-video-url' %>
+          </div>
+        </div>
+      <% end %>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-body">
+          <%= f.label :author, class: 'control-label' -%>
+          <%= collection_select(
+                :item, :author_id, Refinery::Blog::Author.all, :id, :full_name, {},
+                {:class => 's-to-autocomplete form-control input-lg'}
+              ) %>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-body">
+          <%= f.label :main_category_id, 'Main Category (Required)', class: 'control-label' -%>
+          <%= collection_select(:item, :main_category_id, Refinery::Blog::Category.all, :id, :title, {prompt: true}, {:class => 'form-control input-lg c-select'}) %>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-body">
+          <label class="control-label">Sub-Categories</label>
+          <ul id="select-subcat" class='list-unstyled'>
+            <% Refinery::Blog::Category.all.each do |cat| %>
+              <li>
+                <%= label_tag 'item[category_ids][]', :class => 'stripped', :for => (id="item_category_ids_#{cat.id}") do %>
+                  <%= check_box_tag 'item[category_ids][]', cat.id,
+                    @item.categories.include?(cat),
+                    :id => id %>
+                  <%= cat.title %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-body">
+          <label class="control-label">Sections</label>
+          <ul class='list-unstyled'>
+            <% Refinery::Blog::Section.all.each do |section| %>
+              <li class="<%= 'hidden-xs-up' if section.slug == @item.default_section_slug.to_s %>">
+                <%= label_tag 'item[section_ids][]', :class => 'stripped', :for => (id="item_section_ids_#{section.id}") do %>
+                  <%= check_box_tag 'item[section_ids][]', section.id,
+                    @item.sections.include?(section),
+                    :id => id %>
+                  <%= section.slug %>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="sidebar-section-body">
+          <label class="control-label">Tags</label>
+          <%= select_tag "select-tags",
+                options_for_select(Refinery::Blog::Tag.all.collect {|tag| [tag.title, tag.id, {:'data-alternative-spellings' => tag.meta}] }),
+                include_blank: true, class: "s-to-autocomplete select-tags form-control input-lg"
+          %>
+          <div id="tag-picker"
+            data-input-name="item[tag_ids][]"
+            data-create-url="<%= refinery.blog_admin_tags_path %>"
+            data-initial-data="<%= @item.tags.to_hash.to_json %>">
+          </div>
+        </div>
+      </div>
+
+      <%= f.hidden_field :title -%>
+      <%= f.hidden_field :body -%>
+      <%= f.hidden_field :view_template -%>
+      <%= f.hidden_field :content_type -%>
+      <%= f.hidden_field :edit_token -%>
+      <input id="publish_field"  class="publish-field"  name="publish"  type="hidden" value="">
+
+      <%
+        save_btn = '<button class="btn btn-default btn-lg' + (@item.unpublished? ? '' : ' hidden-xs-up') + '"' +
+                           'data-redirect-url="' + @redirect_path + '" type="submit"> ' +
+                     '<span>Save Draft</span>' +
+                   '</button>'
+        delete_btn_txt = @item.unpublished? ? 'Delete' : 'Unpublish'
+      %>
+      <%= render partial: '/refinery/admin/form_actions', locals: {
+            :f => f,
+            :sidebar => true,
+            :submit_redirect_url => @redirect_path,
+            :submit_button_text => @item.unpublished? ? "Publish" : "Update",
+            :submit_button_classes => "btn btn-primary btn-lg publish-button",
+            :continue_editing => false,
+            :hide_cancel => true,
+            :delete_button_text   => delete_btn_txt,
+            :delete_confirmation  => "Are you sure you want to #{delete_btn_txt} it?",
+            :delete_url           => refinery.trash_blog_admin_item_path(@item),
+            :delete_redirect_url  => @redirect_path,
+            :before_delete_button => save_btn.html_safe
+          } -%>
+    <% end # form_for -%>
+  </div>
+<% end # content_for :admin_sidebar %>

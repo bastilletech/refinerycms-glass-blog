@@ -1,0 +1,23 @@
+<% content_for :body_content_title do %>
+  <%= @category.title %>
+<% end %>
+
+<section id="cover" style="height: 200px">
+</section>
+
+<section id="category">
+  <div class="container">
+    <div class="row">
+      <div class="sidebar col-xs-12 col-sm-4 col-md-3">
+        <ul id="page-sub-nav" class="list-unstyled">
+          <% ::Refinery::Blog::Category.get_all.each do |category| %>
+            <li><%= link_to category.title, refinery.blog_category_path(category) %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-9">
+        <h1><%= @category.title %></h1>
+      </div>
+    </div>
+  </div>
+</section>

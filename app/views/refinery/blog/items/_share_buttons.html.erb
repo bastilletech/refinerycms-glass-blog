@@ -1,0 +1,8 @@
+<% context         = defined?(context)         ? context         : '' %>
+<% wrapper_classes = defined?(wrapper_classes) ? wrapper_classes : '' %>
+
+<div class="article-actions flex flex-wrap <%= "#{context} #{wrapper_classes}" %> <%= 'hidden-xs-up' if context == 'bottom' %>">
+  <button class="btn btn-primary btn-md btn-round"><i class="icon icon-comment"></i> Be the first to comment</button>
+  <button class="btn btn-dark btn-facebook btn-md m-l-auto btn-round"><i class="icon icon-facebook"></i> Share (1.1k)</button>
+  <button class="btn btn-dark btn-twitter btn-md m-l-sm btn-round"><i class="icon icon-twitter"></i> Tweet (52)</button>
+</div>

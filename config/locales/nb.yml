@@ -1,0 +1,347 @@
+nb:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      authors:
+        title: Authors
+      sections:
+        title: Sections
+      tags:
+        title: Tags
+      categories:
+        title: Categories
+    blog:
+      items:
+        show:
+          other: Andre Items
+        new:
+          header_message: Ooops, det oppsto et lite problem
+          message: 'Følgende problemer må løses:'
+          send: Send melding
+          privacy_policy: Vi respekterer ditt privatliv
+      admin:
+        items:
+          actions:
+            create_new: Lag en ny Item
+            reorder: Endre rekkefølgen på Items
+            reorder_done: Ferdig å endre rekkefølgen Items
+          records:
+            title: Items
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Items enda. Klikk på "Lag en ny Item" for å
+              legge til din første item.
+          item:
+            view_live_html: Vis hvordan denne item ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne item
+            delete: Fjern denne item permanent
+            move_item_to_closed: Flytt denne forespørselen til lukket
+            move_item_to_open: Flytt denne forespørselen til åpen
+            read_item: Les forespørselen
+            remove_item: Er du sikker på at du ønsker å slette denne forespørselen
+              fra '%{name}'?
+            title: Items
+            said: sa
+            mark_as_spam: Merk som søppel
+            mark_as_ham: Flytt til innboksen
+          toggle_status:
+            closed: Forespørselen '%{item}' er lukket
+            reopened: Forespørselen '%{item}' er gjenåpnet
+          submenu:
+            update_notified: Oppdater hvem som blir informert
+            edit_confirmation_email: Rediger bekreftelses e-posten
+          index:
+            no_items: Du har ikke mottatt noen forespørsler enda.
+          spam:
+            no_spam: Hurra! Du har ikke noen søppelpost.
+          show:
+            details: Detaljer
+            click_to_email: Trykk for å sende e-post
+            status: Status
+            open: "Åpen"
+            closed: Lukket
+            age: Alder
+            actions: Handlinger
+            back_to_all_items: Tilbake til alle forespørslene
+            spam: Søppel
+            spam_yes: ja
+            item: Item
+            title: Items
+        settings:
+          update:
+            updated: "'%{setting}' ble endret."
+          notification_recipients_form:
+            settings_value_name: Send oppdateringer til
+            explanation: Hver gang noen kontakter deg på websiden din, så vil Refinery
+              sende ut en e-post for å si ifra at det er ny forespørsel.
+            hint: Når en ny forespørsel er lagt inn, så vil Refinery sende deg en
+              e-post for å si i fra.
+            example: 'Legg inn din(e) e-post adresse(r) slik: jack@jobb.no, jill@kontoret.no'
+          confirmation_email_form:
+            to: Til
+            from: Fra
+            subject: Emne
+            click_to_edit_subject: Trykk her for å redigere emnet
+            explanation: Hver gang noen sender inn en forespørsel gjennom din webside,
+              så sender Refinery en e-post til personen som la inn forespørselen for
+              å bekrefte at forespørselen er mottatt.
+            below_edit_email_sent: Du kan redigere e-posten som blir sendt ut nedenfor.
+            the_customer_making_item: Kunden som skrev forespørselen
+            message: Melding
+            note: 'Merk: plasser teksten %name% der du ønsker at kundens navn skal
+              vises i e-posten'
+            the_customer_making_author: Kunden som skrev forespørselen
+            the_customer_making_section: Kunden som skrev forespørselen
+            the_customer_making_tag: Kunden som skrev forespørselen
+            the_customer_making_category: Kunden som skrev forespørselen
+          subject_form:
+            subject_value_name: Enme
+        authors:
+          actions:
+            create_new: Lag en ny Author
+            reorder: Endre rekkefølgen på Authors
+            reorder_done: Ferdig å endre rekkefølgen Authors
+          records:
+            title: Authors
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Authors enda. Klikk på "Lag en ny Author" for
+              å legge til din første author.
+          author:
+            view_live_html: Vis hvordan denne author ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne author
+            delete: Fjern denne author permanent
+            move_author_to_closed: Flytt denne forespørselen til lukket
+            move_author_to_open: Flytt denne forespørselen til åpen
+            read_author: Les forespørselen
+            remove_author: Er du sikker på at du ønsker å slette denne forespørselen
+              fra '%{name}'?
+            title: Authors
+            said: sa
+            mark_as_spam: Merk som søppel
+            mark_as_ham: Flytt til innboksen
+          toggle_status:
+            closed: Forespørselen '%{author}' er lukket
+            reopened: Forespørselen '%{author}' er gjenåpnet
+          submenu:
+            update_notified: Oppdater hvem som blir informert
+            edit_confirmation_email: Rediger bekreftelses e-posten
+          index:
+            no_authors: Du har ikke mottatt noen forespørsler enda.
+          spam:
+            no_spam: Hurra! Du har ikke noen søppelpost.
+          show:
+            details: Detaljer
+            click_to_email: Trykk for å sende e-post
+            status: Status
+            open: "Åpen"
+            closed: Lukket
+            age: Alder
+            actions: Handlinger
+            back_to_all_authors: Tilbake til alle forespørslene
+            spam: Søppel
+            spam_yes: ja
+            author: Author
+            title: Authors
+        sections:
+          actions:
+            create_new: Lag en ny Section
+            reorder: Endre rekkefølgen på Sections
+            reorder_done: Ferdig å endre rekkefølgen Sections
+          records:
+            title: Sections
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Sections enda. Klikk på "Lag en ny Section"
+              for å legge til din første section.
+          section:
+            view_live_html: Vis hvordan denne section ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne section
+            delete: Fjern denne section permanent
+            move_section_to_closed: Flytt denne forespørselen til lukket
+            move_section_to_open: Flytt denne forespørselen til åpen
+            read_section: Les forespørselen
+            remove_section: Er du sikker på at du ønsker å slette denne forespørselen
+              fra '%{name}'?
+            title: Sections
+            said: sa
+            mark_as_spam: Merk som søppel
+            mark_as_ham: Flytt til innboksen
+          toggle_status:
+            closed: Forespørselen '%{section}' er lukket
+            reopened: Forespørselen '%{section}' er gjenåpnet
+          submenu:
+            update_notified: Oppdater hvem som blir informert
+            edit_confirmation_email: Rediger bekreftelses e-posten
+          index:
+            no_sections: Du har ikke mottatt noen forespørsler enda.
+          spam:
+            no_spam: Hurra! Du har ikke noen søppelpost.
+          show:
+            details: Detaljer
+            click_to_email: Trykk for å sende e-post
+            status: Status
+            open: "Åpen"
+            closed: Lukket
+            age: Alder
+            actions: Handlinger
+            back_to_all_sections: Tilbake til alle forespørslene
+            spam: Søppel
+            spam_yes: ja
+            section: Section
+            title: Sections
+        tags:
+          actions:
+            create_new: Lag en ny Tag
+            reorder: Endre rekkefølgen på Tags
+            reorder_done: Ferdig å endre rekkefølgen Tags
+          records:
+            title: Tags
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Tags enda. Klikk på "Lag en ny Tag" for å legge
+              til din første tag.
+          tag:
+            view_live_html: Vis hvordan denne tag ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne tag
+            delete: Fjern denne tag permanent
+            move_tag_to_closed: Flytt denne forespørselen til lukket
+            move_tag_to_open: Flytt denne forespørselen til åpen
+            read_tag: Les forespørselen
+            remove_tag: Er du sikker på at du ønsker å slette denne forespørselen
+              fra '%{name}'?
+            title: Tags
+            said: sa
+            mark_as_spam: Merk som søppel
+            mark_as_ham: Flytt til innboksen
+          toggle_status:
+            closed: Forespørselen '%{tag}' er lukket
+            reopened: Forespørselen '%{tag}' er gjenåpnet
+          submenu:
+            update_notified: Oppdater hvem som blir informert
+            edit_confirmation_email: Rediger bekreftelses e-posten
+          index:
+            no_tags: Du har ikke mottatt noen forespørsler enda.
+          spam:
+            no_spam: Hurra! Du har ikke noen søppelpost.
+          show:
+            details: Detaljer
+            click_to_email: Trykk for å sende e-post
+            status: Status
+            open: "Åpen"
+            closed: Lukket
+            age: Alder
+            actions: Handlinger
+            back_to_all_tags: Tilbake til alle forespørslene
+            spam: Søppel
+            spam_yes: ja
+            tag: Tag
+            title: Tags
+        categories:
+          actions:
+            create_new: Lag en ny Category
+            reorder: Endre rekkefølgen på Categories
+            reorder_done: Ferdig å endre rekkefølgen Categories
+          records:
+            title: Categories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Categories enda. Klikk på "Lag en ny Category"
+              for å legge til din første category.
+          category:
+            view_live_html: Vis hvordan denne category ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne category
+            delete: Fjern denne category permanent
+            move_category_to_closed: Flytt denne forespørselen til lukket
+            move_category_to_open: Flytt denne forespørselen til åpen
+            read_category: Les forespørselen
+            remove_category: Er du sikker på at du ønsker å slette denne forespørselen
+              fra '%{name}'?
+            title: Categories
+            said: sa
+            mark_as_spam: Merk som søppel
+            mark_as_ham: Flytt til innboksen
+          toggle_status:
+            closed: Forespørselen '%{category}' er lukket
+            reopened: Forespørselen '%{category}' er gjenåpnet
+          submenu:
+            update_notified: Oppdater hvem som blir informert
+            edit_confirmation_email: Rediger bekreftelses e-posten
+          index:
+            no_categories: Du har ikke mottatt noen forespørsler enda.
+          spam:
+            no_spam: Hurra! Du har ikke noen søppelpost.
+          show:
+            details: Detaljer
+            click_to_email: Trykk for å sende e-post
+            status: Status
+            open: "Åpen"
+            closed: Lukket
+            age: Alder
+            actions: Handlinger
+            back_to_all_categories: Tilbake til alle forespørslene
+            spam: Søppel
+            spam_yes: ja
+            category: Category
+            title: Categories
+      authors:
+        show:
+          other: Andre Authors
+        new:
+          header_message: Ooops, det oppsto et lite problem
+          message: 'Følgende problemer må løses:'
+          send: Send melding
+          privacy_policy: Vi respekterer ditt privatliv
+      sections:
+        show:
+          other: Andre Sections
+        new:
+          header_message: Ooops, det oppsto et lite problem
+          message: 'Følgende problemer må løses:'
+          send: Send melding
+          privacy_policy: Vi respekterer ditt privatliv
+      tags:
+        show:
+          other: Andre Tags
+        new:
+          header_message: Ooops, det oppsto et lite problem
+          message: 'Følgende problemer må løses:'
+          send: Send melding
+          privacy_policy: Vi respekterer ditt privatliv
+      categories:
+        show:
+          other: Andre Categories
+        new:
+          header_message: Ooops, det oppsto et lite problem
+          message: 'Følgende problemer må løses:'
+          send: Send melding
+          privacy_policy: Vi respekterer ditt privatliv
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        view_count: View Count
+        slugify_title: Slugify Title
+        custom_slug: Custom Slug
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

@@ -1,0 +1,23 @@
+<% content_for :body_content_title do %>
+  <%= @tag.title %>
+<% end %>
+
+<section id="cover" style="height: 200px">
+</section>
+
+<section id="tag">
+  <div class="container">
+    <div class="row">
+      <div class="sidebar col-xs-12 col-sm-4 col-md-3">
+        <ul id="page-sub-nav" class="list-unstyled">
+          <% ::Refinery::Blog::Tag.get_all.each do |tag| %>
+            <li><%= link_to tag.title, refinery.blog_tag_path(tag) %></li>
+          <% end %>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-8 col-md-9">
+        <h1><%= @tag.title %></h1>
+      </div>
+    </div>
+  </div>
+</section>

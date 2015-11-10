@@ -1,0 +1,44 @@
+<%= render 'refinery/blog/admin/submenu' %>
+
+<% content_for :admin_content do %>
+
+<div class="admin-page container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <%= form_for [refinery, :blog_admin, @category], :html => {:class => "ajax-form"} do |f| -%>
+        <%= render '/refinery/admin/error_messages',
+                    :object => @category,
+                    :include_object_name => true %>
+
+        <div class='form-group'>
+          <%= f.label :title, class: 'control-label' -%>
+          <%= f.text_field :title, :class => 'form-control' -%>
+        </div>
+
+        <div class='form-group'>
+          <%= render '/refinery/admin/images/image_input',
+                     :f => f,
+                     :field_name => :image,
+                     :image => @category.image
+          -%>
+          <div class="slide-preview">
+            <%= render '/refinery/admin/images/image_preview',
+                       :field_name => :image,
+                       :image => @category.image,
+                       :use_case => :card,
+                       :preview_padding_top => '69%',
+                       :title_text => "Category Image"
+            -%>
+          </div>
+        </div>
+
+        <%= render '/refinery/admin/form_actions', :f => f,
+                   :continue_editing => false,
+                   :delete_title => t('delete', :scope => 'refinery.blog.admin.categories.category'),
+                   :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @category.title) -%>
+      <% end # form_for -%>
+    </div>
+  </div>
+</div>
+
+<% end %>

@@ -1,0 +1,17 @@
+<li class='page-listing' id="<%= dom_id(tag) -%>">
+  <div class="page-row">
+    <!-- <i class="icon icon-file"></i> -->
+    <a class="page-title" href="<%= refinery.edit_blog_admin_tag_path(tag) %>">
+      <%= tag.title %>
+    </a>
+    <span class='actions'>
+      <%= render 'refinery/admin/glass/delete_button',
+                 css_class: 'cancel confirm-delete circle-icon',
+                 delete_url: refinery.blog_admin_tag_path(tag),
+                 after_delete_url: refinery.blog_admin_tags_path,
+                 confirm_text: 'Are you sure you want to delete this Tag?',
+                 delete_btn_text: '<i class="icon icon-trash"></i>'
+      -%>
+    </span>
+  </div>
+</li>

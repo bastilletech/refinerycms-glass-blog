@@ -1,0 +1,312 @@
+zh-CN:
+  refinery:
+    plugins:
+      items:
+        title: Items
+        description: "提供联系方式表格来存放 items"
+      authors:
+        title: Authors
+        description: "提供联系方式表格来存放 authors"
+      sections:
+        title: Sections
+        description: "提供联系方式表格来存放 sections"
+      tags:
+        title: Tags
+        description: "提供联系方式表格来存放 tags"
+      categories:
+        title: Categories
+        description: "提供联系方式表格来存放 categories"
+    blog:
+      items:
+        new:
+          send: "发送邮件"
+          privacy_policy: "我们重视您的隐私"
+        show:
+          other: "其他 Items"
+      admin:
+        items:
+          actions:
+            create_new: "建立新的 Item"
+            reorder: "对 Items 重新排序"
+            reorder_done: "对 Items 的重新排序结束"
+          records:
+            title: Items
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Items . 点击 "Add New Item" 创建一个item.
+          item:
+            read_item: "阅读这个 item"
+            said: "说"
+            mark_as_spam: "标记为垃圾邮件"
+            mark_as_ham: "移动到收件箱"
+          delete: "永久删除 item"
+          submenu:
+            inbox: "收件箱"
+            spam: "垃圾邮件"
+            update_notified: "通知相关人员"
+            edit_confirmation_email: "编辑确认邮件"
+          index:
+            no_items: "您尚未收到任何 items"
+          spam:
+            no_spam: "太棒了！一封垃圾邮件都没有～"
+          show:
+            details: "详细"
+            age: "岁"
+            actions: "操作"
+            back_to_all_items: "返回到全部 items"
+            spam: "垃圾信息"
+            spam_yes: "是"
+            item: Item
+            to: "收件人(To)"
+            from: "发件人(From)"
+            click_to_email: "点击来发送"
+            phone: "电话"
+            date: "日期"
+            message: "信息"
+        settings:
+          notification_recipients_form:
+            settings_value_name: "发通知给"
+            explanation: "每当有人联系您时， Refinery都会发邮件给您."
+            hint: "当有新的 category 被提交时， Refinery 会发邮件告知您。"
+            example: "输入您的Email地址, 形如： jack@work.com, jill@office.com"
+          confirmation_email_form:
+            to: "收件人"
+            from: "发件人"
+            subject: "主题"
+            click_to_edit_subject: "点击编辑主题"
+            explanation: "当有人试图联系您时，Refinery 都会发邮件跟他（拥有category 的人）进行确认"
+            below_edit_email_sent: "您可以在下面编辑邮件内容"
+            the_customer_making_item: "建立 item 的顾客"
+            message: "邮件"
+            note: "提示: 您可以在希望出现对方姓名的地方，使用%name%"
+            the_customer_making_author: "建立 author 的顾客"
+            the_customer_making_section: "建立 section 的顾客"
+            the_customer_making_tag: "建立 tag 的顾客"
+            the_customer_making_category: "建立 category 的顾客"
+        authors:
+          actions:
+            create_new: "建立新的 Author"
+            reorder: "对 Authors 重新排序"
+            reorder_done: "对 Authors 的重新排序结束"
+          records:
+            title: Authors
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Authors . 点击 "Add New Author" 创建一个author.
+          author:
+            read_author: "阅读这个 author"
+            said: "说"
+            mark_as_spam: "标记为垃圾邮件"
+            mark_as_ham: "移动到收件箱"
+          delete: "永久删除 author"
+          submenu:
+            inbox: "收件箱"
+            spam: "垃圾邮件"
+            update_notified: "通知相关人员"
+            edit_confirmation_email: "编辑确认邮件"
+          index:
+            no_authors: "您尚未收到任何 authors"
+          spam:
+            no_spam: "太棒了！一封垃圾邮件都没有～"
+          show:
+            details: "详细"
+            age: "岁"
+            actions: "操作"
+            back_to_all_authors: "返回到全部 authors"
+            spam: "垃圾信息"
+            spam_yes: "是"
+            author: Author
+            to: "收件人(To)"
+            from: "发件人(From)"
+            click_to_email: "点击来发送"
+            phone: "电话"
+            date: "日期"
+            message: "信息"
+        sections:
+          actions:
+            create_new: "建立新的 Section"
+            reorder: "对 Sections 重新排序"
+            reorder_done: "对 Sections 的重新排序结束"
+          records:
+            title: Sections
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Sections . 点击 "Add New Section" 创建一个section.
+          section:
+            read_section: "阅读这个 section"
+            said: "说"
+            mark_as_spam: "标记为垃圾邮件"
+            mark_as_ham: "移动到收件箱"
+          delete: "永久删除 section"
+          submenu:
+            inbox: "收件箱"
+            spam: "垃圾邮件"
+            update_notified: "通知相关人员"
+            edit_confirmation_email: "编辑确认邮件"
+          index:
+            no_sections: "您尚未收到任何 sections"
+          spam:
+            no_spam: "太棒了！一封垃圾邮件都没有～"
+          show:
+            details: "详细"
+            age: "岁"
+            actions: "操作"
+            back_to_all_sections: "返回到全部 sections"
+            spam: "垃圾信息"
+            spam_yes: "是"
+            section: Section
+            to: "收件人(To)"
+            from: "发件人(From)"
+            click_to_email: "点击来发送"
+            phone: "电话"
+            date: "日期"
+            message: "信息"
+        tags:
+          actions:
+            create_new: "建立新的 Tag"
+            reorder: "对 Tags 重新排序"
+            reorder_done: "对 Tags 的重新排序结束"
+          records:
+            title: Tags
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Tags . 点击 "Add New Tag" 创建一个tag.
+          tag:
+            read_tag: "阅读这个 tag"
+            said: "说"
+            mark_as_spam: "标记为垃圾邮件"
+            mark_as_ham: "移动到收件箱"
+          delete: "永久删除 tag"
+          submenu:
+            inbox: "收件箱"
+            spam: "垃圾邮件"
+            update_notified: "通知相关人员"
+            edit_confirmation_email: "编辑确认邮件"
+          index:
+            no_tags: "您尚未收到任何 tags"
+          spam:
+            no_spam: "太棒了！一封垃圾邮件都没有～"
+          show:
+            details: "详细"
+            age: "岁"
+            actions: "操作"
+            back_to_all_tags: "返回到全部 tags"
+            spam: "垃圾信息"
+            spam_yes: "是"
+            tag: Tag
+            to: "收件人(To)"
+            from: "发件人(From)"
+            click_to_email: "点击来发送"
+            phone: "电话"
+            date: "日期"
+            message: "信息"
+        categories:
+          actions:
+            create_new: "建立新的 Category"
+            reorder: "对 Categories 重新排序"
+            reorder_done: "对 Categories 的重新排序结束"
+          records:
+            title: Categories
+            sorry_no_results: "对不起，未找到结果。"
+            no_items_yet: 目前没有 Categories . 点击 "Add New Category" 创建一个category.
+          category:
+            read_category: "阅读这个 category"
+            said: "说"
+            mark_as_spam: "标记为垃圾邮件"
+            mark_as_ham: "移动到收件箱"
+          delete: "永久删除 category"
+          submenu:
+            inbox: "收件箱"
+            spam: "垃圾邮件"
+            update_notified: "通知相关人员"
+            edit_confirmation_email: "编辑确认邮件"
+          index:
+            no_categories: "您尚未收到任何 categories"
+          spam:
+            no_spam: "太棒了！一封垃圾邮件都没有～"
+          show:
+            details: "详细"
+            age: "岁"
+            actions: "操作"
+            back_to_all_categories: "返回到全部 categories"
+            spam: "垃圾信息"
+            spam_yes: "是"
+            category: Category
+            to: "收件人(To)"
+            from: "发件人(From)"
+            click_to_email: "点击来发送"
+            phone: "电话"
+            date: "日期"
+            message: "信息"
+      mailer:
+        notification:
+          greeting: "你好"
+          you_recieved_new_item: "您刚刚收到了一封新 item."
+          item_starts: "--- item 开始---"
+          item_ends: "--- item 结束---"
+          from: "发件人"
+          email: Email
+          phone: "电话"
+          message: "正文"
+          closing_line: "此致，"
+          ps_html: 注：所有您的categories都会保存在"Categories"里。这样您可以在任何时间查看它们。
+          you_recieved_new_author: "您刚刚收到了一封新 author."
+          author_starts: "--- author 开始---"
+          author_ends: "--- author 结束---"
+          you_recieved_new_section: "您刚刚收到了一封新 section."
+          section_starts: "--- section 开始---"
+          section_ends: "--- section 结束---"
+          you_recieved_new_tag: "您刚刚收到了一封新 tag."
+          tag_starts: "--- tag 开始---"
+          tag_ends: "--- tag 结束---"
+          you_recieved_new_category: "您刚刚收到了一封新 category."
+          category_starts: "--- category 开始---"
+          category_ends: "--- category 结束---"
+      authors:
+        new:
+          send: "发送邮件"
+          privacy_policy: "我们重视您的隐私"
+        show:
+          other: "其他 Authors"
+      sections:
+        new:
+          send: "发送邮件"
+          privacy_policy: "我们重视您的隐私"
+        show:
+          other: "其他 Sections"
+      tags:
+        new:
+          send: "发送邮件"
+          privacy_policy: "我们重视您的隐私"
+        show:
+          other: "其他 Tags"
+      categories:
+        new:
+          send: "发送邮件"
+          privacy_policy: "我们重视您的隐私"
+        show:
+          other: "其他 Categories"
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        view_count: View Count
+        slugify_title: Slugify Title
+        custom_slug: Custom Slug
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

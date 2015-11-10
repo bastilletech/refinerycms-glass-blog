@@ -1,0 +1,5 @@
+<% interrupted = false unless defined?(interrupted) %>
+<% other_user = @item.editor.present? ? @item.editor.username : 'someone' %>
+
+<a href="javascript:history.back(-1)" class="btn btn-secondary-outline">Let <%= other_user %> keep editing</a>
+<a href="<%= refinery.edit_blog_admin_item_path(:id => @item.id, :takeover_token => @item.edit_token) %>" class="btn btn-danger allow-unload">I’m taking over!</a>

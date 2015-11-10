@@ -1,0 +1,102 @@
+<% editing = defined?(editing) ? editing : false %>
+
+<% content_for :body_content_title do %>
+  <%= @item.title %>
+<% end %>
+
+<section class="article-page">
+  <progress class="progress read-progress hidden-xs-up" value="0" max="100" data-content-selector=".article-content"></progress>
+  <section class="article-cover cover" data-image-bg-id="item_image_id"
+    <% if @item.image.present? %> style="background-image: url(<%= @item.image_url('705x248#') %>)"<% end %>
+  >
+  </section>
+  <section class="container article">
+    <div class="row">
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+        <div class="article-meta-wrapper flex m-b-lg align-items-center border-bottom">
+          <a class="avatar" style="background-image: url(<%= @item.author_photo_url('100x100#') %>)" href=""></a>
+          <div class="article-meta m-l">
+            <p class="author bold"><a href=""><%= @item.author.present? ? @item.author.full_name : 'Anonymous'%> <i class="icon icon-arrow-right m-l-xs"></i></a></p>
+            <p class="small">
+              <%= @item.format_published_at %>
+              <i class="icon icon-eye m-l-sm"></i> <%= @item.format_view_count %>
+              <a href="" class="m-l-sm"><i class="icon icon-comment"></i> 234</a>
+            </p>
+          </div>
+          <div class="article-meta-social m-l-auto">
+            <button class="btn btn-sm btn-dark btn-facebook m-l-auto btn-round"><i class="icon icon-facebook"></i> Share (1.1k)</button>
+            <button class="btn btn-sm btn-dark btn-twitter m-l-xs btn-round"><i class="icon icon-twitter"></i> Tweet (52)</button>
+            <button class="btn btn-sm btn-primary btn-circle m-l-xs btn-round"><i class="icon icon-comment m-r-0"></i></button>
+          </div>
+        </div>
+        <p class="text-uppercase m-b-0 small">
+          <%=
+            @item.categories.map { |cat|
+              link_to cat.title + cat.to_param, refinery.filter_blog_items_path({
+                category_id: cat.to_param, section_id: @item.default_section_slug, tmpl: 'all'
+              })
+            }.join(', ').html_safe
+          %>
+        </p>
+        <div class="article-content p-b-md">
+          <h1  class="glass-edit page-title"      data-glass-options='{"form_id": "item_title"}' glass-placeholder="Title"><%= @item.title %></h1>
+          <div class="glass-edit glass-edit-html page-body" data-glass-options='{"form_id": "item_body", "type": "html"}'>
+            <%= raw @item.body.present? ? @item.body : '<p><br></p>' %>
+          </div>
+        </div>
+        <div class="resource-assets flex border-top border-bottom p-y-md">
+          <div class="flex-1 p-r-md">
+            <img src="/assets/resource.jpg" class="img-responsive">
+          </div>
+          <div class="flex-3">
+            <div class="flex align-items-center m-b-md">
+              <div class="flex-1 m-r-md">
+                <h4 class="bold m-b-xs">Download Assets</h4>
+                <h6 class="m-b-0">How to lead a Bible Study</h6>
+              </div>
+              <a class="btn btn-primary btn-round" href=""><i class="icon icon-download"></i> Download all</a>
+            </div>
+            <div class="assets">
+              <div class="asset flex align-items-center p-y">
+                <p class="flex-1 m-r-md m-b-0"><b>Article 1:</b> Vision: What's the purpose of a Bible Study</p>
+                <a class="btn btn-secondary-outline btn-round btn-md" href=""><i class="icon icon-download"></i> Download</a>
+              </div>
+              <div class="asset flex align-items-center p-y">
+                <p class="flex-1 m-r-md m-b-0"><b>Article 1:</b> Vision: What's the purpose of a Bible Study</p>
+                <a class="btn btn-secondary-outline btn-round btn-md" href=""><i class="icon icon-download"></i> Download</a>
+              </div>
+              <div class="asset flex align-items-center p-y">
+                <p class="flex-1 m-r-md m-b-0"><b>Article 1:</b> Vision: What's the purpose of a Bible Study</p>
+                <a class="btn btn-secondary-outline btn-round btn-md" href=""><i class="icon icon-download"></i> Download</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <% if @item.related.any? && !editing %>
+    <section class="related steel-blue-bg p-y-lg m-t-lg">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="lined-heading text-uppercase text-center m-b-lg white flex">You might also like</h2>
+          </div>
+          <%= render partial: "refinery/blog/items/card", collection: @item.related.take(3) %>
+          <div class="col-xs-12 text-center p-t-md">
+            <a class="btn btn-secondary btn-round" href="<%= refinery.articles_blog_items_path %>">View all</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  <% end %>
+  <section class="comments">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+          Comments
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

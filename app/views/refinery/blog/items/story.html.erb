@@ -1,0 +1,62 @@
+<% editing = defined?(editing) ? editing : false %>
+
+<% content_for :body_content_title do %>
+  <%= @item.title %>
+<% end %>
+
+<section class="article-page p-y-lg">
+  <progress class="progress read-progress hidden-xs-up" value="0" max="100" data-content-selector=".article-content"></progress>
+  <section class="container article">
+    <div class="row">
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+        <div class="text-center">
+          <h1 class="glass-edit display-2 page-title" data-glass-options='{"form_id": "item_title"}'
+              glass-placeholder="Title"><%= @item.title %></h1>
+          <div class="article-meta m-b-xl">
+            <p>
+              <i class="icon icon-eye m-l-sm"></i> <%= @item.format_view_count %>
+              <a href="" class="m-l"><i class="icon icon-comment"></i> 234</a>
+            </p>
+          </div>
+        </div>
+        <% if @item.featured_video_url.present? || editing %>
+          <div class="video-wrapper m-b-lg <%= 'hidden-xs-up' if @item.featured_video_url.blank? %>">
+            <iframe src="<%= @item.featured_video_url %>&title=0&byline=0&portrait=0"
+                    width="500" height="211" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen
+                    data-vid-src-id="item_featured_video_url">
+            </iframe>
+          </div>
+        <% end %>
+        <% if @item.featured_video_url.blank? %>
+          <div class="featured-img m-b-lg gray-2-bg"  data-image-bg-id="item_image_id"
+            <% if @item.image.present? %> style="background-image: url(<%= @item.image_url('705x248#') %>)"<% end %>
+          >
+          </div>
+        <% end %>
+      </div>
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+        <%= render partial: 'refinery/blog/items/share_buttons', locals: {context: 'top',   wrapper_classes: 'p-b-md m-b-lg border-bottom'} %>
+        <div class="article-content p-b-md">
+          <div class="glass-edit glass-edit-html page-body" data-glass-options='{"form_id": "item_body", "type": "html"}'>
+            <%= raw @item.body.present? ? @item.body : '<p><br></p>' %>
+          </div>
+        </div>
+        <%= render partial: 'refinery/blog/items/share_buttons', locals: {context: 'bottom', wrapper_classes: 'p-t-md m-t-md p-b-lg m-b-lg border-top'} %>
+      </div>
+    </div>
+  </section>
+
+  <% if @item.related.any? && !editing %>
+    <%= render partial: 'refinery/blog/items/story_carousel', locals: {items: @item.related.take(3)} %>
+  <% end %>
+
+  <section class="comments">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+          Comments
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

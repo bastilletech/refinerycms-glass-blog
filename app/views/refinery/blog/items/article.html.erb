@@ -1,0 +1,110 @@
+<% editing = defined?(editing) ? editing : false %>
+
+<% content_for :body_content_title do %>
+  <%= @item.title %>
+<% end %>
+
+<section class="article-page">
+  <progress class="progress read-progress hidden-xs-up" value="0" max="100" data-content-selector=".article-content"></progress>
+  <section class="article-cover cover" data-image-bg-id="item_image_id"
+    <% if @item.image.present? %> style="background-image: url(<%= @item.image_url('705x248#') %>)"<% end %>
+  >
+  </section>
+  <section class="container article">
+    <div class="row">
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+        <div class="article-meta-wrapper flex m-b-lg align-items-center border-bottom">
+          <a class="avatar" style="background-image: url(<%= @item.author_photo_url('100x100#') %>)" href=""></a>
+          <div class="article-meta m-l">
+            <p class="author bold"><a href=""><%= @item.author.present? ? @item.author.full_name : 'Anonymous'%> <i class="icon icon-arrow-right m-l-xs"></i></a></p>
+            <p class="small">
+              <%= @item.format_published_at %>
+              <i class="icon icon-eye m-l-sm"></i> <%= @item.format_view_count %>
+              <a href="" class="m-l-sm"><i class="icon icon-comment"></i> 234</a>
+            </p>
+          </div>
+          <div class="article-meta-social m-l-auto">
+            <button class="btn btn-sm btn-dark btn-facebook m-l-auto btn-round"><i class="icon icon-facebook"></i> Share (1.1k)</button>
+            <button class="btn btn-sm btn-dark btn-twitter m-l-xs btn-round"><i class="icon icon-twitter"></i> Tweet (52)</button>
+            <button class="btn btn-sm btn-primary btn-circle m-l-xs btn-round"><i class="icon icon-comment m-r-0"></i></button>
+          </div>
+        </div>
+        <p class="text-uppercase m-b-0 small">
+          <%=
+            @item.categories.map { |cat|
+              link_to cat.title + cat.to_param, refinery.filter_blog_items_path({
+                category_id: cat.to_param, section_id: @item.default_section_slug, tmpl: 'all'
+              })
+            }.join(', ').html_safe
+          %>
+        </p>
+        <div class="article-content p-b-md">
+          <div class="social-links hidden-md-down">
+            <button class="btn btn-dark btn-facebook-outline btn-circle btn-round"><i class="icon icon-facebook m-r-0"></i></button>
+            <button class="btn btn-dark btn-twitter-outline btn-circle btn-round"><i class="icon icon-twitter m-r-0"></i></button>
+            <button class="btn btn-primary-outline btn-circle btn-round"><i class="icon icon-comment m-r-0"></i></button>
+          </div>
+          <h1  class="glass-edit page-title"      data-glass-options='{"form_id": "item_title"}' glass-placeholder="Title"><%= @item.title %></h1>
+          <div class="glass-edit glass-edit-html page-body" data-glass-options='{"form_id": "item_body", "type": "html"}'>
+            <%= raw @item.body.present? ? @item.body : '<p><br></p>' %>
+          </div>
+        </div>
+        <%= render partial: 'refinery/blog/items/share_buttons', locals: {context: 'bottom', wrapper_classes: 'p-t-md m-t-md p-b-sm border-top'} %>
+      </div>
+    </div>
+  </section>
+  <% if @item.related.any? && !editing %>
+    <section class="related steel-blue-bg p-y-lg m-t-lg">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2 class="lined-heading text-uppercase text-center m-b-lg white flex">You might also like</h2>
+          </div>
+
+
+          <div class="col-xs-12 col-sm-6 col-lg-4 flex flex-column">
+            <div class="card tall tall-content flex-1">
+              <a class="card-link" href="">
+                <div class="card-header p-t-md" style="background-image: url(/assets/cover.jpg)"></div>
+              </a>
+              <a class="card-block card-category flex align-items-center p-x-md" href="">
+                <p class="text-uppercase m-b-0 flex-1"><i class="icon icon-circle m-r-sm" style="color: #f0ad4e;"></i> Category</p><i class="icon icon-file-text icon-lg"></i>
+              </a>
+              <a class="card-block card-content flex-1 p-a-md" href="">
+                <h2 class="card-title z-5">Resource</h2>
+                <p class="teaser z-5">There will be days when you feel like you can’t do it anymore. Here are seven things to do or remember in the darkest moments.</p>
+              </a>
+              <a class="card-footer flex p-y-sm" href="">
+                <div class="avatar m-r-sm">
+                  <img class="img-circle img-responsive" src="/assets/avatar.jpg">
+                </div>
+                <div class="card-meta">
+                  <p class="small author m-b-0">Author </p>
+                  <p class="small date m-b-0">Sep. 2, 1985</p>
+                </div>
+                <div class="view-count m-l-auto">
+                  <i class="icon icon-eye m-r-xs"></i> 3.1k
+                </div>
+              </a>
+            </div>
+          </div>
+
+
+          <%= render partial: "refinery/blog/items/card", collection: @item.related.take(3) %>
+          <div class="col-xs-12 text-center p-t-md">
+            <a class="btn btn-secondary btn-round" href="<%= refinery.articles_blog_items_path %>">View all</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  <% end %>
+  <section class="comments">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+          Comments
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

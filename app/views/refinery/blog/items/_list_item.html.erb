@@ -1,0 +1,45 @@
+<% hide = defined?(hide) ? hide : false %>
+<% featured = defined?(featured) ? featured : false %>
+
+<div class="card lg m-b-xl <%= list_item.content_type %> <%= list_item.view_template %> <%= 'inverted' if featured %>"
+     style="<%= 'display: none;' if hide %>">
+  <a class="card-link" href="<%= refinery.blog_item_path(list_item) %>">
+    <div class="card-header p-t-md" style="background-image: url(<%= list_item.image_url('705x248#') %>)">
+      <div class="content-type">
+        <i class="icon icon-play"></i>
+      </div>
+    </div>
+    <div class="card-block p-x-0 p-b-0">
+      <p class="text-uppercase m-b-xs small category"><i class="icon icon-circle m-r-sm" style="color: #f0ad4e;"></i> <%= list_item.category_title %></p>
+      <h2 class="card-title"><%= list_item.title %></h2>
+      <p class="teaser"><%= content_teaser(list_item, list_item.body, 100) %></p>
+    </div>
+  </a>
+  <% if !featured %>
+    <div class="card-footer flex align-items-center p-b-md p-x-0">
+      <% if list_item.story? %>
+        <% is_video = (list_item.content_type == 'video') %>
+        <a class="btn-link flex align-items-center story-footer" href="<%= refinery.blog_item_path(list_item) %>">
+          <i class="icon <%= is_video ? 'icon-play' : 'icon-file-text' %> icon-lg m-r"></i>
+          <%= is_video ? 'Watch' : 'Read' %> this story
+        </a>
+      <% else %>
+        <div class="blog-footer flex align-items-center">
+          <a class="btn-link flex align-items-center " href="<%= list_item.author.present? ? refinery.blog_author_path(list_item.author) : '#'%>">
+            <div class="avatar m-r shrink-0">
+              <img class="img-circle img-responsive" src="<%= list_item.author_photo_url('45x45#') %>">
+            </div>
+            <span class="author m-r ellipsis"><%= list_item.author.present? ? list_item.author.full_name : 'Anonymous'%></span>
+          </a>
+          <span class="date shrink-0"><%= list_item.format_published_at %></span>
+        </div>
+      <% end %>
+      <a class="m-l-auto hidden-xs-down" href="">
+        <i class="icon icon-comment"></i> 14
+      </a>
+      <span class="m-l-md hidden-xs-down">
+        <i class="icon icon-eye"></i> <%= list_item.format_view_count %>
+      </span>
+    </div>
+  <% end %>
+</div>

@@ -1,0 +1,415 @@
+en:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      authors:
+        title: Authors
+      sections:
+        title: Sections
+      tags:
+        title: Tags
+      blog:
+        title: Blog
+      resources:
+        title: Resources
+      stories:
+        title: Stories
+    blog:
+      items:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+        show:
+          other: Other Items
+      admin:
+        submenu:
+          items:
+            title: Items
+            manage: Manage Items
+            new: Add New Item
+            reorder: Reorder Items
+            reorder_done: Done Reordering Items
+          authors:
+            title: Authors
+            manage: Manage Authors
+            new: Add New Author
+            reorder: Reorder Authors
+            reorder_done: Done Reordering Authors
+          sections:
+            title: Sections
+            manage: Manage Sections
+            new: Add New Section
+            reorder: Reorder Sections
+            reorder_done: Done Reordering Sections
+          tags:
+            title: Tags
+            manage: Manage Tags
+            new: Add New Tag
+            reorder: Reorder Tags
+            reorder_done: Done Reordering Tags
+          categories:
+            title: Categories
+            manage: Manage Categories
+            new: Add New Category
+            reorder: Reorder Categories
+            reorder_done: Done Reordering Categories
+        items:
+          records:
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Items yet. Click "New Item" to add your first
+              item.
+          item:
+            read: Read the item
+            approve: Approve
+            reject: Reject
+            delete: Delete
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          delete: Remove this item forever
+          approved: The item has been approved.
+          rejected: The item has been rejected.
+          submenu:
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          index:
+            title: Items
+            no_items: You have not received any items yet.
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_items: Back to all items
+            spam: Spam
+            spam_yes: 'yes'
+            item: Item
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        settings:
+          notification_recipients_form:
+            settings_value_name: Send notifications to
+            explanation: Every time someone contacts you on your website, Refinery
+              sends out an email to say there is a new category.
+            hint: When a new category is submitted, Refinery will send an email notification
+              to you.
+            example: 'Enter your email address(es) like: jack@work.com, jill@office.com'
+          confirmation_email_form:
+            to: To
+            from: From
+            subject: Subject
+            click_to_edit_subject: Click here to edit the subject
+            explanation: Every time someone contacts you on your website, Refinery
+              sends out an email to confirm the category with the person who made
+              it.
+            below_edit_email_sent: Below you can edit the email that is sent out.
+            the_customer_making_item: The customer making the item
+            message: Message
+            note: 'Note: place the text %name% where you''d like the customer''s name
+              to appear in the email'
+            the_customer_making_author: The customer making the author
+            the_customer_making_section: The customer making the section
+            the_customer_making_tag: The customer making the tag
+            the_customer_making_category: The customer making the category
+        authors:
+          records:
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Authors yet. Click "New Author" to add your
+              first author.
+          author:
+            read: Read the author
+            approve: Approve
+            reject: Reject
+            delete: Delete
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          delete: Remove this author forever
+          approved: The item has been approved.
+          rejected: The item has been rejected.
+          submenu:
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          index:
+            title: Authors
+            no_authors: You have not received any authors yet.
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_authors: Back to all authors
+            spam: Spam
+            spam_yes: 'yes'
+            author: Author
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        sections:
+          records:
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Sections yet. Click "New Section" to add your
+              first section.
+          section:
+            read: Read the section
+            approve: Approve
+            reject: Reject
+            delete: Delete
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          delete: Remove this section forever
+          approved: The item has been approved.
+          rejected: The item has been rejected.
+          submenu:
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          index:
+            title: Sections
+            no_sections: You have not received any sections yet.
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_sections: Back to all sections
+            spam: Spam
+            spam_yes: 'yes'
+            section: Section
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        tags:
+          records:
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Tags yet. Click "New Tag" to add your first
+              tag.
+          tag:
+            read: Read the tag
+            approve: Approve
+            reject: Reject
+            delete: Delete
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          delete: Remove this tag forever
+          approved: The item has been approved.
+          rejected: The item has been rejected.
+          submenu:
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          index:
+            title: Tags
+            no_tags: You have not received any tags yet.
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_tags: Back to all tags
+            spam: Spam
+            spam_yes: 'yes'
+            tag: Tag
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+        categories:
+          records:
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Categories yet. Click "New Category" to add
+              your first category.
+          category:
+            read: Read the category
+            approve: Approve
+            reject: Reject
+            delete: Delete
+            said: said
+            mark_as_spam: Mark as spam
+            mark_as_ham: Move to inbox
+          delete: Remove this category forever
+          approved: The item has been approved.
+          rejected: The item has been rejected.
+          submenu:
+            inbox: Inbox
+            new: New
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          index:
+            title: Categories
+            new: New
+            no_categories: You have not received any categories yet.
+            inbox: Inbox
+            approved: Approved
+            rejected: Rejected
+            spam: Spam
+            update_notified: Update who gets notified
+            edit_confirmation_email: Edit confirmation email
+            toggle_moderation: Moderation
+          spam:
+            no_spam: Hooray! You don't have any spam.
+          show:
+            details: Details
+            age: Age
+            actions: Actions
+            back_to_all_categories: Back to all categories
+            spam: Spam
+            spam_yes: 'yes'
+            category: Category
+            to: To
+            from: From
+            click_to_email: Click to email this address
+            phone: Phone
+            date: Date
+            message: Message
+      mailer:
+        notification:
+          greeting: Hi there
+          you_recieved_new_item: You just received a new item on your website.
+          item_starts: "--- item starts ---"
+          item_ends: "--- item ends ---"
+          from: From
+          email: Email
+          phone: Phone
+          message: Message
+          closing_line: Kind Regards
+          ps_html: P.S. All your categories are stored in the "Categories" section
+            of Refinery should you ever want to view it later there.
+          you_recieved_new_author: You just received a new author on your website.
+          author_starts: "--- author starts ---"
+          author_ends: "--- author ends ---"
+          you_recieved_new_section: You just received a new section on your website.
+          section_starts: "--- section starts ---"
+          section_ends: "--- section ends ---"
+          you_recieved_new_tag: You just received a new tag on your website.
+          tag_starts: "--- tag starts ---"
+          tag_ends: "--- tag ends ---"
+          you_recieved_new_category: You just received a new category on your website.
+          category_starts: "--- category starts ---"
+          category_ends: "--- category ends ---"
+      authors:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+        show:
+          other: Other Authors
+      sections:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+        show:
+          other: Other Sections
+      tags:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+        show:
+          other: Other Tags
+      categories:
+        new:
+          send: Send message
+          privacy_policy: We value your privacy
+        show:
+          other: Other Categories
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

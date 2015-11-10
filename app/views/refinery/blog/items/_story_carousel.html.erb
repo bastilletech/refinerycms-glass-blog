@@ -1,0 +1,29 @@
+<section id="featured-stories" class="carousel slide circle-controls slideshow carousel-captioned m-t-lg" data-ride="carousel">
+  <ol class="carousel-indicators flex align-items-center justify-center">
+    <% items.each_with_index do |item, index| %>
+      <li data-target="#featured-stories" data-slide-to="<%= index %>" style="background-image: url(<%= item.image_url('108x108#') %>);" class="<%= 'active' if index == 0 %>"></li>
+    <% end %>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <% items.each_with_index do |item, index| %>
+      <a class="carousel-item <%= 'active' if index == 0 %>" href="<%= refinery.blog_item_path(item) %>" style="background-image: url(<%= item.image_url('705x248#') %>);">
+        <div class="carousel-caption">
+          <h2 class="step step-1"><%= item.title %></h2>
+          <% is_video = (item.content_type == 'video') %>
+          <p class="step step-2 m-b"><%= is_video ? 'Watch' : 'Read' %> this story</p>
+          <% if is_video %>
+            <p class="step step-3"><i class="icon icon-play-circle icon-4x"></i></p>
+          <% end %>
+        </div>
+      </a>
+    <% end %>
+  </div>
+  <a class="left carousel-control flex align-items-center" href="#featured-stories" role="button" data-slide="prev">
+    <i class="icon icon-left-lg m-l-md"></i>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control flex align-items-center" href="#featured-stories" role="button" data-slide="next">
+    <i class="icon icon-right-lg m-l-auto m-r-md"></i>
+    <span class="sr-only">Next</span>
+  </a>
+</section>

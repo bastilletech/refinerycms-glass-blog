@@ -1,0 +1,297 @@
+it:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      authors:
+        title: Authors
+      sections:
+        title: Sections
+      tags:
+        title: Tags
+      categories:
+        title: Categories
+    blog:
+      items:
+        show:
+          other: Altri Items
+        new:
+          header_message: Un problema si è verificato
+          message: 'I seguenti problemi devono essere corretti:'
+          send: Invia messaggio
+          privacy_policy: Noi diamo valore alla tua privacy
+      admin:
+        items:
+          actions:
+            create_new: Aggiungi Nuovo Item
+            reorder: Riordina Items
+            reorder_done: Termina il Riordino di Items
+          records:
+            title: Items
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Items. Clicca "Aggiungi Nuovo Item" per
+              aggiungere il tuo primo item.
+          item:
+            view_live_html: Guarda live questo item <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo item
+            delete: Rimuovi per sempre questo item
+            move_item_to_closed: Spostare questa inchiesta chiusa
+            move_item_to_open: Spostare questa indagine per aprire
+            read_item: Leggi l'inchiesta
+            remove_item: Sei sicuro di voler cancellare la richiesta di '%{name}'?
+            title: Items
+          toggle_status:
+            closed: Inchiesta '%{item}' è chiuso
+            reopened: Inchiesta '%{item}' si riapre
+          index:
+            no_items: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_items: Torna a tutte le richieste
+            item: Item
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+        settings:
+          update:
+            updated: "'%{setting}' stato aggiornato con successo."
+          notification_recipients_form:
+            settings_value_name: Invia a notifiche
+            explanation: Ogni volta che qualcuno ti contatti sul suo sito web, Refinery
+              invia una mail a dire che c'è una nuova indagine.
+            hint: Inserisci un indirizzo email di cui sopra. Vuoi la notifica di andare
+              a più di una persona? Inserisci più indirizzi email separati da virgole.
+            example: E.g. me@domain.com, friend@msn.com, workmate@work.com
+          confirmation_email_form:
+            to: A
+            from: Da
+            subject: Soggetto
+            click_to_edit_subject: Clicca qui per modificare l'oggetto
+            explanation: Ogni volta che qualcuno ti contatti sul suo sito web, Refinery
+              invia una e-mail per confermare la richiesta con la persona che ha reso.
+            below_edit_email_sent: Qui di seguito è possibile modificare l'e-mail
+              che viene inviata.
+            the_customer_making_item: Il cliente rendendo l'indagine
+            message: Messaggio
+            note: 'Nota: inserire il testo %name% dove desideri che il nome del cliente
+              a comparire nella e-mail'
+            the_customer_making_author: Il cliente rendendo l'indagine
+            the_customer_making_section: Il cliente rendendo l'indagine
+            the_customer_making_tag: Il cliente rendendo l'indagine
+            the_customer_making_category: Il cliente rendendo l'indagine
+          subject_form:
+            subject_value_name: Soggetto
+        authors:
+          actions:
+            create_new: Aggiungi Nuovo Author
+            reorder: Riordina Authors
+            reorder_done: Termina il Riordino di Authors
+          records:
+            title: Authors
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Authors. Clicca "Aggiungi Nuovo Author"
+              per aggiungere il tuo primo author.
+          author:
+            view_live_html: Guarda live questo author <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo author
+            delete: Rimuovi per sempre questo author
+            move_author_to_closed: Spostare questa inchiesta chiusa
+            move_author_to_open: Spostare questa indagine per aprire
+            read_author: Leggi l'inchiesta
+            remove_author: Sei sicuro di voler cancellare la richiesta di '%{name}'?
+            title: Authors
+          toggle_status:
+            closed: Inchiesta '%{author}' è chiuso
+            reopened: Inchiesta '%{author}' si riapre
+          index:
+            no_authors: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_authors: Torna a tutte le richieste
+            author: Author
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+        sections:
+          actions:
+            create_new: Aggiungi Nuovo Section
+            reorder: Riordina Sections
+            reorder_done: Termina il Riordino di Sections
+          records:
+            title: Sections
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Sections. Clicca "Aggiungi Nuovo Section"
+              per aggiungere il tuo primo section.
+          section:
+            view_live_html: Guarda live questo section <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo section
+            delete: Rimuovi per sempre questo section
+            move_section_to_closed: Spostare questa inchiesta chiusa
+            move_section_to_open: Spostare questa indagine per aprire
+            read_section: Leggi l'inchiesta
+            remove_section: Sei sicuro di voler cancellare la richiesta di '%{name}'?
+            title: Sections
+          toggle_status:
+            closed: Inchiesta '%{section}' è chiuso
+            reopened: Inchiesta '%{section}' si riapre
+          index:
+            no_sections: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_sections: Torna a tutte le richieste
+            section: Section
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+        tags:
+          actions:
+            create_new: Aggiungi Nuovo Tag
+            reorder: Riordina Tags
+            reorder_done: Termina il Riordino di Tags
+          records:
+            title: Tags
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Tags. Clicca "Aggiungi Nuovo Tag" per
+              aggiungere il tuo primo tag.
+          tag:
+            view_live_html: Guarda live questo tag <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo tag
+            delete: Rimuovi per sempre questo tag
+            move_tag_to_closed: Spostare questa inchiesta chiusa
+            move_tag_to_open: Spostare questa indagine per aprire
+            read_tag: Leggi l'inchiesta
+            remove_tag: Sei sicuro di voler cancellare la richiesta di '%{name}'?
+            title: Tags
+          toggle_status:
+            closed: Inchiesta '%{tag}' è chiuso
+            reopened: Inchiesta '%{tag}' si riapre
+          index:
+            no_tags: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_tags: Torna a tutte le richieste
+            tag: Tag
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+        categories:
+          actions:
+            create_new: Aggiungi Nuovo Category
+            reorder: Riordina Categories
+            reorder_done: Termina il Riordino di Categories
+          records:
+            title: Categories
+            sorry_no_results: Spiacenti! Nessun risultato trovato
+            no_items_yet: Non ci sono ancora Categories. Clicca "Aggiungi Nuovo Category"
+              per aggiungere il tuo primo category.
+          category:
+            view_live_html: Guarda live questo category <br/><em>(apre una nuova finestra)</em>
+            edit: Modifica questo category
+            delete: Rimuovi per sempre questo category
+            move_category_to_closed: Spostare questa inchiesta chiusa
+            move_category_to_open: Spostare questa indagine per aprire
+            read_category: Leggi l'inchiesta
+            remove_category: Sei sicuro di voler cancellare la richiesta di '%{name}'?
+            title: Categories
+          toggle_status:
+            closed: Inchiesta '%{category}' è chiuso
+            reopened: Inchiesta '%{category}' si riapre
+          index:
+            no_categories: Non hai ancora ricevuto alcuna richiesta in.
+          show:
+            details: Dettagli
+            click_to_email: Clicca per e-mail
+            status: Stato
+            open: Aperto
+            closed: Chiuso
+            age: Età
+            actions: Azioni
+            back_to_all_categories: Torna a tutte le richieste
+            category: Category
+          submenu:
+            update_notified: Aggiornamento chi viene notificata
+            edit_confirmation_email: Modifica email di conferma
+      authors:
+        show:
+          other: Altri Authors
+        new:
+          header_message: Un problema si è verificato
+          message: 'I seguenti problemi devono essere corretti:'
+          send: Invia messaggio
+          privacy_policy: Noi diamo valore alla tua privacy
+      sections:
+        show:
+          other: Altri Sections
+        new:
+          header_message: Un problema si è verificato
+          message: 'I seguenti problemi devono essere corretti:'
+          send: Invia messaggio
+          privacy_policy: Noi diamo valore alla tua privacy
+      tags:
+        show:
+          other: Altri Tags
+        new:
+          header_message: Un problema si è verificato
+          message: 'I seguenti problemi devono essere corretti:'
+          send: Invia messaggio
+          privacy_policy: Noi diamo valore alla tua privacy
+      categories:
+        show:
+          other: Altri Categories
+        new:
+          header_message: Un problema si è verificato
+          message: 'I seguenti problemi devono essere corretti:'
+          send: Invia messaggio
+          privacy_policy: Noi diamo valore alla tua privacy
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        view_count: View Count
+        slugify_title: Slugify Title
+        custom_slug: Custom Slug
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

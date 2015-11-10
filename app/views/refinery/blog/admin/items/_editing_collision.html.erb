@@ -1,0 +1,11 @@
+<% interrupted = false unless defined?(interrupted) %>
+<% other_user = @item.editor.present? ? @item.editor.username : 'someone' %>
+
+<p>
+  It looks like <%= other_user %>
+  <% if interrupted %>
+    is currently editing this, so we can’t save your changes. You have a two options: you can let them do their thing or you can take over.</p><p><p><small>If you choose to let them keep editing, you can <button type="button" class="btn btn-inline btn-modal-cancel" data-dismiss="modal">close this box</button> so you can copy and paste your changes elsewhere for now. When they’re done, you can paste your changes in at a later time.</small>
+  <% else %>
+    is currently editing this page. You have two options: you can let <%= other_user %> keep working, or you can take over editing this page. If you decide to take over, you’ll take over from where <%= other_user %> left off.
+  <% end %>
+</p>

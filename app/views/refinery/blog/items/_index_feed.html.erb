@@ -1,0 +1,87 @@
+<section class="container index-feed p-y-lg" data-layout="list-view" data-sort="recent">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 m-b-lg">
+      <div class="row m-b-md filtering-options">
+        <div class="col-xs-12 col-sm-6 m-b-sm">
+          <div class="dropdown">
+            <button class="btn btn-white btn-block text-left" type="button" id="category-filter" data-toggle="dropdown" aria-expanded="true">
+              Showing: <strong><%= @filters[:category].present? ? @filters[:category].title : 'All Categories' %></strong> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-filter">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= refinery.filter_blog_items_path(@filter_ids.merge({category_id: 'all'})) %>">All Categories</a></li>
+              <% Refinery::Blog::Category.get_all.each do |cat| %>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="<%= refinery.filter_blog_items_path(@filter_ids.merge({category_id: cat.to_param})) %>">
+                    <%= cat.title %> <%= "(#{@items.in_category(cat.id).count})" if @filters[:category].blank? %>
+                  </a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 m-b-sm search-bar">
+          <input type="text" class="form-control" placeholder="Search">
+          <button class="btn btn-link" type="button"><i class="icon icon-search m-r-0"></i></button>
+        </div>
+      </div>
+      <div class="flex p-t-sm">
+        <div class="sorting-options flex-1 flex m-r-md">
+          <button class="btn btn-link active p-x-sm" data-sort="recent">
+            <span class="hidden-xs-down">Most</span> Recent
+          </button>
+          <button class="btn btn-link p-x-sm"        data-sort="popular">
+            <span class="hidden-xs-down">Most</span> Popular
+          </button>
+        </div>
+        <div class="btn-group layout-options m-l-auto" role="group" aria-label="View Options">
+          <button type="button" class="btn btn-default active" data-layout="list-view">
+            <i class="icon icon-list-layout m-r-0 bump-up-2"></i>
+          </button>
+          <button type="button" class="btn btn-default" data-layout="grid-view">
+            <i class="icon icon-grid m-r-0"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <% items_index_classes = 'items-index infinite-scroll-container inactive' %>
+    <div id="list-view-index"   class="col-xs-12 col-sm-8 col-sm-offset-2 <%= items_index_classes %>"
+                                data-layout="list-view" data-sort="recent"
+                                data-pages-total="<%= @items.total_pages %>">
+      <% @items.each_with_index do |list_item, i| %>
+        <%= render partial: "refinery/blog/items/list_item", locals: {list_item: list_item, hide: @items.current_page == 1 && i >= 3} %>
+      <% end %>
+    </div>
+    <div id="list-view-popular" class="col-xs-12 col-sm-8 col-sm-offset-2 <%= items_index_classes %>"
+                                data-layout="list-view" data-sort="popular"
+                                data-pages-total="<%= @popular_items.total_pages %>">
+      <% @popular_items.each_with_index do |list_item, i| %>
+        <%= render partial: "refinery/blog/items/list_item", locals: {list_item: list_item, hide: @popular_items.current_page == 1 && i >= 3} %>
+      <% end %>
+    </div>
+  </div>
+
+  <div id="grid-view-index"     class="row <%= items_index_classes %>"
+                                data-layout="grid-view" data-sort="recent"
+                                data-pages-total="<%= @items.total_pages %>">
+    <%= render partial: "refinery/blog/items/card", collection: @items %>
+  </div>
+
+  <div id="grid-view-popular"   class="row <%= items_index_classes %>"
+                                data-layout="grid-view" data-sort="popular"
+                                data-pages-total="<%= @popular_items.total_pages %>">
+    <%= render partial: "refinery/blog/items/card", collection: @popular_items %>
+  </div>
+
+  <% if @items.total_pages > 1 %>
+    <div class="row">
+      <div class="col-xs-12 text-center p-t-sm p-b-lg">
+        <button type="button" class="btn btn-secondary-outline btn-round activate-inf-scroll">Load more</button>
+      </div>
+    </div>
+  <% end %>
+
+  <%= render 'refinery/admin/glass/infinite_scroll_spinner' %>
+</section>

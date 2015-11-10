@@ -1,0 +1,33 @@
+<div class="col-xs-12 col-sm-6 col-lg-4 flex flex-column">
+  <div class="card tall tall-image flex-1 <%= card.content_type %>">
+    <a class="card-link flex flex-column flex-1" href="<%= refinery.blog_item_path(card) %>">
+      <div class="card-header flex-1 p-t-md" style="background-image: url(<%= card.image_url('350x413#') %>)">
+        <h2 class="card-title z-5"><%= card.title %></h2>
+        <p class="teaser z-5"><%= content_teaser(card, card.body, 100) %></p>
+      </div>
+    </a>
+    <a class="card-block card-category flex align-items-center p-x-md" href="">
+      <p class="text-uppercase m-b-0 flex-1"><i class="icon icon-circle m-r-sm" style="color: #f0ad4e;"></i> <%= card.category_title %></p><i class="icon icon-file-text icon-lg"></i>
+    </a>
+    <% if card.story? %>
+      <% is_video = (card.content_type == 'video') %>
+      <a class="card-footer flex p-y-sm" href="<%= refinery.blog_item_path(card) %>">
+        <i class="icon <%= is_video ? 'icon-play' : 'icon-file-text' %> icon-lg m-r"></i>
+        <%= is_video ? 'Watch' : 'Read' %> this story
+      </a>
+    <% else %>
+      <a class="card-footer flex p-y-sm" href="<%= card.author.present? ? refinery.blog_author_path(card.author) : '#'%>">
+        <div class="avatar m-r-sm">
+          <img class="img-circle img-responsive" src="<%= card.author_photo_url('45x45#') %>">
+        </div>
+        <div class="card-meta">
+          <p class="small author m-b-0"><%= card.author.present? ? card.author.full_name : 'Anonymous'%></p>
+          <p class="small date m-b-0"><%= card.format_published_at %></p>
+        </div>
+        <div class="view-count m-l-auto">
+          <i class="icon icon-eye m-r-xs"></i> 3.1k
+        </div>
+      </a>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<section class="article-cover cover" data-image-bg-id="item_image_id"
+  style="background-image: url(/assets/cover.jpg);"
+>
+</section>
+
+<section class="white-bg article-page">
+  <div class="container author">
+    <div class="row">
+      <div class="col-xs-12 col-lg-10 col-lg-offset-1 col-xl-8 col-xl-offset-2">
+        <div class="article-meta-wrapper flex m-b-lg align-items-center flex-column">
+          <div class="avatar" style="background-image: url(/assets/avatar.jpg);"></div>
+          <div class="article-meta text-center">
+            <h3 class="author bold gray-6 m-b-sm">Therese Aaker</h3>
+            <p>
+              <a href=""><i class="icon icon-twitter"></i> @rekaa24</a>
+            </p>
+          </div>
+        </div>
+        <div class="glass-edit glass-edit-html" data-glass-options='{"form_id": "author_bio", "type": "html"}'>
+          <%= raw @author.bio.present? ? @author.bio : '<p><br></p>' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="author-article-index">
+  INDEX FEED GOES HERE
+</section>

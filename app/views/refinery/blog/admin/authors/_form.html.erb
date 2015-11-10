@@ -1,0 +1,46 @@
+<%= render 'refinery/blog/admin/submenu' %>
+
+<% content_for :admin_page_preview do %>
+  <%= render template: 'refinery/blog/authors/show' %>
+<% end %>
+
+<% content_for :admin_sidebar do %>
+  <div class="page-options">
+    <div class="page-status">
+      <span>Status: <strong>Draft</strong></span>
+    </div>
+    <%= form_for [refinery, :blog_admin, @author], :html => {:class => "ajax-form"} do |f| -%>
+      <div class="sidebar-section">
+        <%= render '/refinery/admin/error_messages',
+                  :object => @author,
+                  :include_object_name => true %>
+      </div>
+
+      <%= f.hidden_field :last_name -%>
+      <%= f.hidden_field :first_name -%>
+      <%= f.hidden_field :bio -%>
+      <%= f.hidden_field :email -%>
+      <%= f.hidden_field :twitter_url -%>
+      <%= f.hidden_field :facebook_url -%>
+      <div class="m-b-md">
+        <div class='form-group'>
+          <%= render '/refinery/admin/images/image_input',
+            :f => f,
+            :field_name => :photo,
+            :image => @author.photo
+          -%>
+          <%= render '/refinery/admin/images/image_preview',
+            :field_name => :photo,
+            :image => @author.photo
+          -%>
+        </div>
+      </div>
+
+      <%= render '/refinery/admin/form_actions', :f => f, :sidebar => true,
+                 :continue_editing => false,
+                 :delete_title => t('delete', :scope => 'refinery.blog.admin.authors.author'),
+                 :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @author.last_name) -%>
+    <% end # form_for -%>
+  </div>
+
+<% end # content_for :admin_sidebar %>

@@ -1,0 +1,16 @@
+<% content_for :admin_submenu do %>
+  <ul class='list-unstyled'>
+    <li class='list-heading'>
+      <%= t('.categories.title') %>
+    </li>
+
+    <li>
+      <%= link_to '<i class="icon icon-index"></i>'.html_safe + t('.categories.manage'),
+                  refinery.blog_admin_categories_path %>
+    </li>
+    <li>
+      <%= link_to '<i class="icon icon-add"></i>'.html_safe + t('.categories.new'),
+                  refinery.new_blog_admin_category_path %>
+    </li>
+  </ul>
+<% end %>

@@ -1,0 +1,322 @@
+nl:
+  refinery:
+    plugins:
+      items:
+        title: Items
+        description: Contactformulier en beheer van items
+      authors:
+        title: Authors
+        description: Contactformulier en beheer van authors
+      sections:
+        title: Sections
+        description: Contactformulier en beheer van sections
+      tags:
+        title: Tags
+        description: Contactformulier en beheer van tags
+      categories:
+        title: Categories
+        description: Contactformulier en beheer van categories
+    blog:
+      items:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+        show:
+          other: Andere Items
+      admin:
+        items:
+          actions:
+            create_new: Nieuwe Item toevoegen
+            reorder: De volgorde van de Items wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Item-volgorde
+          records:
+            title: Items
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Items. Druk op 'Nieuwe Item toevoegen'
+              om de eerste toe te voegen.
+          item:
+            read_item: Lees de item
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          delete: Deze item definitief verwijderen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_items: U heeft nog geen items ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_items: Terug naar alle items
+            spam: Spam
+            spam_yes: ja
+            item: Item
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        settings:
+          notification_recipients_form:
+            settings_value_name: Stuur notificaties naar
+            explanation: Telkens wanneer iemand het contactformulier invult op uw
+              website, stuurt Refinery een bevestiging naar de verzender.
+            hint: Wilt u naar meerdere adressen notificaties sturen? Vul dan meerdere
+              e-mailadressen in gescheiden door komma's
+            example: 'Bijvoorbeeld: jan@werk.nl, els@kantoor.nl'
+          confirmation_email_form:
+            to: Aan
+            from: Van
+            subject: Onderwerp
+            click_to_edit_subject: Klik hier om het onderwerp bewerken
+            explanation: Telkens wanneer iemand het contactformulier invult op uw
+              website, stuurt Refinery een bevestiging naar de verzender.
+            below_edit_email_sent: Hieronder kunt u de email die verzonden wordt bewerken.
+            the_customer_making_item: De persoon die de item heeft ingezonden
+            message: Bericht
+            note: 'N.B.: plaats de tekst %name% overal in de email waar u de naam
+              van de klant persoon wilt invoegen'
+            the_customer_making_author: De persoon die de author heeft ingezonden
+            the_customer_making_section: De persoon die de section heeft ingezonden
+            the_customer_making_tag: De persoon die de tag heeft ingezonden
+            the_customer_making_category: De persoon die de category heeft ingezonden
+        authors:
+          actions:
+            create_new: Nieuwe Author toevoegen
+            reorder: De volgorde van de Authors wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Author-volgorde
+          records:
+            title: Authors
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Authors. Druk op 'Nieuwe Author toevoegen'
+              om de eerste toe te voegen.
+          author:
+            read_author: Lees de author
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          delete: Deze author definitief verwijderen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_authors: U heeft nog geen authors ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_authors: Terug naar alle authors
+            spam: Spam
+            spam_yes: ja
+            author: Author
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        sections:
+          actions:
+            create_new: Nieuwe Section toevoegen
+            reorder: De volgorde van de Sections wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Section-volgorde
+          records:
+            title: Sections
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Sections. Druk op 'Nieuwe Section toevoegen'
+              om de eerste toe te voegen.
+          section:
+            read_section: Lees de section
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          delete: Deze section definitief verwijderen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_sections: U heeft nog geen sections ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_sections: Terug naar alle sections
+            spam: Spam
+            spam_yes: ja
+            section: Section
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        tags:
+          actions:
+            create_new: Nieuwe Tag toevoegen
+            reorder: De volgorde van de Tags wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Tag-volgorde
+          records:
+            title: Tags
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Tags. Druk op 'Nieuwe Tag toevoegen' om
+              de eerste toe te voegen.
+          tag:
+            read_tag: Lees de tag
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          delete: Deze tag definitief verwijderen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_tags: U heeft nog geen tags ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_tags: Terug naar alle tags
+            spam: Spam
+            spam_yes: ja
+            tag: Tag
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+        categories:
+          actions:
+            create_new: Nieuwe Category toevoegen
+            reorder: De volgorde van de Categories wijzigen
+            reorder_done: Klaar met het wijzingen van de van de Category-volgorde
+          records:
+            title: Categories
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Categories. Druk op 'Nieuwe Category toevoegen'
+              om de eerste toe te voegen.
+          category:
+            read_category: Lees de category
+            said: zei
+            mark_as_spam: Als spam markeren
+            mark_as_ham: Naar de inbox verplaatsen
+          delete: Deze category definitief verwijderen
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Wijzigen wie op de hoogte wordt gesteld
+            edit_confirmation_email: Bevestigings-e-mail bewerken
+          index:
+            no_categories: U heeft nog geen categories ontvangen.
+          spam:
+            no_spam: Hoera! U heeft geen spam.
+          show:
+            details: Details
+            age: Leeftijd
+            actions: Acties
+            back_to_all_categories: Terug naar alle categories
+            spam: Spam
+            spam_yes: ja
+            category: Category
+            to: Aan
+            from: Van
+            click_to_email: Klik hier om een e-mail te sturen naar dit adres
+            phone: Telefoonnummer
+            date: Datum
+            message: Bericht
+      mailer:
+        notification:
+          greeting: Hallo
+          you_recieved_new_item: U hebt een nieuwe item ontvangen via de website.
+          item_starts: "--- begin van de item ---"
+          item_ends: "--- einde van de item ---"
+          from: Van
+          email: E-mail
+          phone: Telefoon
+          message: Bericht
+          closing_line: Met vriendelijke groet,
+          ps_html: P.S. Alle categories worden opgeslagen in de sectie Categories
+            van Refinery.
+          you_recieved_new_author: U hebt een nieuwe author ontvangen via de website.
+          author_starts: "--- begin van de author ---"
+          author_ends: "--- einde van de author ---"
+          you_recieved_new_section: U hebt een nieuwe section ontvangen via de website.
+          section_starts: "--- begin van de section ---"
+          section_ends: "--- einde van de section ---"
+          you_recieved_new_tag: U hebt een nieuwe tag ontvangen via de website.
+          tag_starts: "--- begin van de tag ---"
+          tag_ends: "--- einde van de tag ---"
+          you_recieved_new_category: U hebt een nieuwe category ontvangen via de website.
+          category_starts: "--- begin van de category ---"
+          category_ends: "--- einde van de category ---"
+      authors:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+        show:
+          other: Andere Authors
+      sections:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+        show:
+          other: Andere Sections
+      tags:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+        show:
+          other: Andere Tags
+      categories:
+        new:
+          send: Bericht verzenden
+          privacy_policy: Wij respecteren uw privacy
+        show:
+          other: Andere Categories
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        view_count: View Count
+        slugify_title: Slugify Title
+        custom_slug: Custom Slug
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

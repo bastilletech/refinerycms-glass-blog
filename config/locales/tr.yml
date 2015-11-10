@@ -1,0 +1,323 @@
+tr:
+  refinery:
+    plugins:
+      items:
+        title: Items
+        description: Iletisim formu ve kayitlarin temini items
+      authors:
+        title: Authors
+        description: Iletisim formu ve kayitlarin temini authors
+      sections:
+        title: Sections
+        description: Iletisim formu ve kayitlarin temini sections
+      tags:
+        title: Tags
+        description: Iletisim formu ve kayitlarin temini tags
+      categories:
+        title: Categories
+        description: Iletisim formu ve kayitlarin temini categories
+    blog:
+      items:
+        new:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+        show:
+          other: Diger Items
+      admin:
+        items:
+          actions:
+            create_new: Yeni Ekle Item
+            reorder: Tekrar sirala Items
+            reorder_done: Tekrar siralama tamamlandiItems
+          records:
+            title: Items
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Items yok henuz.  Tikla "Yeni Ekle Item" eklemek
+              senin ilk item.
+          item:
+            read_item: Read the item
+            said: dedi
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          delete: Sonsuza dek item sil
+          submenu:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_items: Henuz  Herhangi bir  items almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_items: Geri don tum items
+            spam: Istenmeyen E-posta
+            spam_yes: evet
+            item: Item
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+        settings:
+          notification_recipients_form:
+            settings_value_name: Bildirimleri gonderecegin  adres
+            explanation: Her kim olursa seninle web sitesi uzerinden iletisime gecen,
+              Refinery yeni bir category  diye e-posta atar.
+            hint: Yeni Bir category teslim edildiginde, Refinery bir e-posta bildirisi
+              yollayacak sana.
+            example: 'Lutfen e-posta adres(ler)inizi giriniz. Ornek olarak: jack@work.com,
+              jill@office.com gibi'
+          confirmation_email_form:
+            to: Kime
+            from: Kimden
+            subject: Baslik
+            click_to_edit_subject: Basligi degistirmek icin buraya tiklayiniz
+            explanation: Her kim olursa seninle web siten uzerinden iletisime gecen,Refinery
+              yeni bir dogrulama postasi gonderir category yapan kisiye
+            below_edit_email_sent: Asagida gonderilen e-postayi duzenleyebilirsin.
+            the_customer_making_item: Musteri item yapiyor
+            message: Mesaj
+            note: 'Not: metini hizala %name% nerede musterinizin e-posta adresi gibi
+              gozukmesini istiyorsan'
+            the_customer_making_author: Musteri author yapiyor
+            the_customer_making_section: Musteri section yapiyor
+            the_customer_making_tag: Musteri tag yapiyor
+            the_customer_making_category: Musteri category yapiyor
+        authors:
+          actions:
+            create_new: Yeni Ekle Author
+            reorder: Tekrar sirala Authors
+            reorder_done: Tekrar siralama tamamlandiAuthors
+          records:
+            title: Authors
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Authors yok henuz.  Tikla "Yeni Ekle Author"
+              eklemek senin ilk author.
+          author:
+            read_author: Read the author
+            said: dedi
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          delete: Sonsuza dek author sil
+          submenu:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_authors: Henuz  Herhangi bir  authors almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_authors: Geri don tum authors
+            spam: Istenmeyen E-posta
+            spam_yes: evet
+            author: Author
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+        sections:
+          actions:
+            create_new: Yeni Ekle Section
+            reorder: Tekrar sirala Sections
+            reorder_done: Tekrar siralama tamamlandiSections
+          records:
+            title: Sections
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Sections yok henuz.  Tikla "Yeni Ekle Section"
+              eklemek senin ilk section.
+          section:
+            read_section: Read the section
+            said: dedi
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          delete: Sonsuza dek section sil
+          submenu:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_sections: Henuz  Herhangi bir  sections almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_sections: Geri don tum sections
+            spam: Istenmeyen E-posta
+            spam_yes: evet
+            section: Section
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+        tags:
+          actions:
+            create_new: Yeni Ekle Tag
+            reorder: Tekrar sirala Tags
+            reorder_done: Tekrar siralama tamamlandiTags
+          records:
+            title: Tags
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Tags yok henuz.  Tikla "Yeni Ekle Tag" eklemek
+              senin ilk tag.
+          tag:
+            read_tag: Read the tag
+            said: dedi
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          delete: Sonsuza dek tag sil
+          submenu:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_tags: Henuz  Herhangi bir  tags almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_tags: Geri don tum tags
+            spam: Istenmeyen E-posta
+            spam_yes: evet
+            tag: Tag
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+        categories:
+          actions:
+            create_new: Yeni Ekle Category
+            reorder: Tekrar sirala Categories
+            reorder_done: Tekrar siralama tamamlandiCategories
+          records:
+            title: Categories
+            sorry_no_results: Uzgunum! Herhangi bir sonuc bulunamadi.
+            no_items_yet: Herhangi bir Categories yok henuz.  Tikla "Yeni Ekle Category"
+              eklemek senin ilk category.
+          category:
+            read_category: Read the category
+            said: dedi
+            mark_as_spam: Spam olarak isaretle
+            mark_as_ham: Gelen kutusuna tasi
+          delete: Sonsuza dek category sil
+          submenu:
+            inbox: Gelen Kutusu
+            spam: Istenmeyen E-posta
+            update_notified: Uyari alanlari guncelle
+            edit_confirmation_email: Dogrulama e-posta'sini duzenle
+          index:
+            no_categories: Henuz  Herhangi bir  categories almadiniz.
+          spam:
+            no_spam: Oley! Herhangi bir istenmeyen e-posta yok
+          show:
+            details: Detay
+            age: Yas
+            actions: Eylemler
+            back_to_all_categories: Geri don tum categories
+            spam: Istenmeyen E-posta
+            spam_yes: evet
+            category: Category
+            to: Kime
+            from: Kimden
+            click_to_email: Bu adrese e-posta'layin
+            phone: Telefon
+            date: Tarih
+            message: Mesaj
+      mailer:
+        notification:
+          greeting: Selamlar
+          you_recieved_new_item: You just received a new item on your website.
+          item_starts: "--- item starts ---"
+          item_ends: "--- item ends ---"
+          from: Kimden
+          email: E-posta
+          phone: Telefon
+          message: Mesaj
+          closing_line: Saygilarimizla
+          ps_html: Senin butun categories kayitli oldugu yer "Categories" burasidir
+            eger ileride kullanmak istersen
+          you_recieved_new_author: You just received a new author on your website.
+          author_starts: "--- author starts ---"
+          author_ends: "--- author ends ---"
+          you_recieved_new_section: You just received a new section on your website.
+          section_starts: "--- section starts ---"
+          section_ends: "--- section ends ---"
+          you_recieved_new_tag: You just received a new tag on your website.
+          tag_starts: "--- tag starts ---"
+          tag_ends: "--- tag ends ---"
+          you_recieved_new_category: You just received a new category on your website.
+          category_starts: "--- category starts ---"
+          category_ends: "--- category ends ---"
+      authors:
+        new:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+        show:
+          other: Diger Authors
+      sections:
+        new:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+        show:
+          other: Diger Sections
+      tags:
+        new:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+        show:
+          other: Diger Tags
+      categories:
+        new:
+          send: Mesaj Gonder
+          privacy_policy: Mahremiyetinize onem veriyoruz.
+        show:
+          other: Diger Categories
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        view_count: View Count
+        slugify_title: Slugify Title
+        custom_slug: Custom Slug
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

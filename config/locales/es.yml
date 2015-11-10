@@ -1,0 +1,303 @@
+es:
+  refinery:
+    plugins:
+      items:
+        title: Items
+      authors:
+        title: Authors
+      sections:
+        title: Sections
+      tags:
+        title: Tags
+      categories:
+        title: Categories
+    blog:
+      items:
+        show:
+          other: Otros items
+        new:
+          header_message: Mil disculpas hay un pequeño problema.
+          message: 'Los siguientes problemas necesitan ser corregidos:'
+          send: Enviar mensaje
+          privacy_policy: Nosotros valoramos tu privacidad
+      admin:
+        items:
+          actions:
+            create_new: Crear nuevo item
+            reorder: Reordenar items
+            reorder_done: Reordenación de items completada
+          records:
+            title: Items
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay items todavía. Pulsa en "Crear nuevo Item" para crear
+              tu primer item.
+          item:
+            view_live_html: Ver este item como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este item
+            delete: Borrar este item para siempre
+            move_item_to_closed: Cambiar esta consulta a cerrada
+            move_item_to_open: Cambiar esta consulta a abierta
+            read_item: Leer esta consulta
+            remove_item: Estas seguro que quieres borrar esta consulta de '%{name}'?
+            title: Items
+          toggle_status:
+            closed: La consulta '%{item}' esta cerrada
+            reopened: La consulta '%{item}' esta abierta
+          index:
+            no_items: No has recibido ninguna consulta aun.
+          show:
+            details: Detalles
+            click_to_email: Click al email
+            status: Estatus
+            open: Abierto
+            closed: Cerrado
+            age: Edad
+            actions: Acciones
+            back_to_all_items: Regresar a todas las consultas
+            item: Item
+          submenu:
+            update_notified: Actualizar a quien será notificado
+            edit_confirmation_email: Editar email de confirmación
+        settings:
+          update:
+            updated: "'%{setting}' fue actualizado exitosamente."
+          notification_recipients_form:
+            settings_value_name: Mandar notificaciones a
+            explanation: Cada vez que alguien se comunique con usted en su sitio web,
+              Refinery enviara un correo electrónico respecto a esta nueva consulta.
+            hint: Ingrese una dirección de correo. Ingrese la dirección de correo
+              de las persona que vaya a ser notificada, si quiere que varias personas
+              sean notificadas ingrese las direcciones de correo separadas por comas.
+            example: 'Ejemplo: me@domain.com, friend@msn.com, workmate@work.com'
+          confirmation_email_form:
+            to: Para
+            from: De
+            subject: Asunto
+            click_to_edit_subject: Click aqui para modificar el asunto
+            explanation: Cada vez que alguien se comunique con usted en su sitio web,
+              Refinery enviara un correo electrónico respecto a esta nueva consulta.
+            below_edit_email_sent: Abajo usted puede editar el email a donde la consulta
+              será enviado.
+            the_customer_making_item: El cliente haciendo la consulta
+            message: Mensaje
+            note: 'Nota: ingrese el texto %name% donde quiera que el nombre del cliente
+              aparezca en el email'
+            the_customer_making_author: El cliente haciendo la consulta
+            the_customer_making_section: El cliente haciendo la consulta
+            the_customer_making_tag: El cliente haciendo la consulta
+            the_customer_making_category: El cliente haciendo la consulta
+          subject_form:
+            subject_value_name: Asunto
+        authors:
+          actions:
+            create_new: Crear nuevo author
+            reorder: Reordenar authors
+            reorder_done: Reordenación de authors completada
+          records:
+            title: Authors
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay authors todavía. Pulsa en "Crear nuevo Author" para
+              crear tu primer author.
+          author:
+            view_live_html: Ver este author como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este author
+            delete: Borrar este author para siempre
+            move_author_to_closed: Cambiar esta consulta a cerrada
+            move_author_to_open: Cambiar esta consulta a abierta
+            read_author: Leer esta consulta
+            remove_author: Estas seguro que quieres borrar esta consulta de '%{name}'?
+            title: Authors
+          toggle_status:
+            closed: La consulta '%{author}' esta cerrada
+            reopened: La consulta '%{author}' esta abierta
+          index:
+            no_authors: No has recibido ninguna consulta aun.
+          show:
+            details: Detalles
+            click_to_email: Click al email
+            status: Estatus
+            open: Abierto
+            closed: Cerrado
+            age: Edad
+            actions: Acciones
+            back_to_all_authors: Regresar a todas las consultas
+            author: Author
+          submenu:
+            update_notified: Actualizar a quien será notificado
+            edit_confirmation_email: Editar email de confirmación
+        sections:
+          actions:
+            create_new: Crear nuevo section
+            reorder: Reordenar sections
+            reorder_done: Reordenación de sections completada
+          records:
+            title: Sections
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay sections todavía. Pulsa en "Crear nuevo Section"
+              para crear tu primer section.
+          section:
+            view_live_html: Ver este section como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este section
+            delete: Borrar este section para siempre
+            move_section_to_closed: Cambiar esta consulta a cerrada
+            move_section_to_open: Cambiar esta consulta a abierta
+            read_section: Leer esta consulta
+            remove_section: Estas seguro que quieres borrar esta consulta de '%{name}'?
+            title: Sections
+          toggle_status:
+            closed: La consulta '%{section}' esta cerrada
+            reopened: La consulta '%{section}' esta abierta
+          index:
+            no_sections: No has recibido ninguna consulta aun.
+          show:
+            details: Detalles
+            click_to_email: Click al email
+            status: Estatus
+            open: Abierto
+            closed: Cerrado
+            age: Edad
+            actions: Acciones
+            back_to_all_sections: Regresar a todas las consultas
+            section: Section
+          submenu:
+            update_notified: Actualizar a quien será notificado
+            edit_confirmation_email: Editar email de confirmación
+        tags:
+          actions:
+            create_new: Crear nuevo tag
+            reorder: Reordenar tags
+            reorder_done: Reordenación de tags completada
+          records:
+            title: Tags
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay tags todavía. Pulsa en "Crear nuevo Tag" para crear
+              tu primer tag.
+          tag:
+            view_live_html: Ver este tag como abierto al público <br/><em>(abre en
+              ventana nueva)</em>
+            edit: Editar este tag
+            delete: Borrar este tag para siempre
+            move_tag_to_closed: Cambiar esta consulta a cerrada
+            move_tag_to_open: Cambiar esta consulta a abierta
+            read_tag: Leer esta consulta
+            remove_tag: Estas seguro que quieres borrar esta consulta de '%{name}'?
+            title: Tags
+          toggle_status:
+            closed: La consulta '%{tag}' esta cerrada
+            reopened: La consulta '%{tag}' esta abierta
+          index:
+            no_tags: No has recibido ninguna consulta aun.
+          show:
+            details: Detalles
+            click_to_email: Click al email
+            status: Estatus
+            open: Abierto
+            closed: Cerrado
+            age: Edad
+            actions: Acciones
+            back_to_all_tags: Regresar a todas las consultas
+            tag: Tag
+          submenu:
+            update_notified: Actualizar a quien será notificado
+            edit_confirmation_email: Editar email de confirmación
+        categories:
+          actions:
+            create_new: Crear nuevo category
+            reorder: Reordenar categories
+            reorder_done: Reordenación de categories completada
+          records:
+            title: Categories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay categories todavía. Pulsa en "Crear nuevo Category"
+              para crear tu primer category.
+          category:
+            view_live_html: Ver este category como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este category
+            delete: Borrar este category para siempre
+            move_category_to_closed: Cambiar esta consulta a cerrada
+            move_category_to_open: Cambiar esta consulta a abierta
+            read_category: Leer esta consulta
+            remove_category: Estas seguro que quieres borrar esta consulta de '%{name}'?
+            title: Categories
+          toggle_status:
+            closed: La consulta '%{category}' esta cerrada
+            reopened: La consulta '%{category}' esta abierta
+          index:
+            no_categories: No has recibido ninguna consulta aun.
+          show:
+            details: Detalles
+            click_to_email: Click al email
+            status: Estatus
+            open: Abierto
+            closed: Cerrado
+            age: Edad
+            actions: Acciones
+            back_to_all_categories: Regresar a todas las consultas
+            category: Category
+          submenu:
+            update_notified: Actualizar a quien será notificado
+            edit_confirmation_email: Editar email de confirmación
+      authors:
+        show:
+          other: Otros authors
+        new:
+          header_message: Mil disculpas hay un pequeño problema.
+          message: 'Los siguientes problemas necesitan ser corregidos:'
+          send: Enviar mensaje
+          privacy_policy: Nosotros valoramos tu privacidad
+      sections:
+        show:
+          other: Otros sections
+        new:
+          header_message: Mil disculpas hay un pequeño problema.
+          message: 'Los siguientes problemas necesitan ser corregidos:'
+          send: Enviar mensaje
+          privacy_policy: Nosotros valoramos tu privacidad
+      tags:
+        show:
+          other: Otros tags
+        new:
+          header_message: Mil disculpas hay un pequeño problema.
+          message: 'Los siguientes problemas necesitan ser corregidos:'
+          send: Enviar mensaje
+          privacy_policy: Nosotros valoramos tu privacidad
+      categories:
+        show:
+          other: Otros categories
+        new:
+          header_message: Mil disculpas hay un pequeño problema.
+          message: 'Los siguientes problemas necesitan ser corregidos:'
+          send: Enviar mensaje
+          privacy_policy: Nosotros valoramos tu privacidad
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        view_count: View Count
+        slugify_title: Slugify Title
+        custom_slug: Custom Slug
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

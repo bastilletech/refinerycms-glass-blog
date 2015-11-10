@@ -1,0 +1,325 @@
+sk:
+  refinery:
+    plugins:
+      items:
+        title: Items
+        description: Poskytuje kontaktný formulár a zaznamenáva items
+      authors:
+        title: Authors
+        description: Poskytuje kontaktný formulár a zaznamenáva authors
+      sections:
+        title: Sections
+        description: Poskytuje kontaktný formulár a zaznamenáva sections
+      tags:
+        title: Tags
+        description: Poskytuje kontaktný formulár a zaznamenáva tags
+      categories:
+        title: Categories
+        description: Poskytuje kontaktný formulár a zaznamenáva categories
+    blog:
+      items:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+        show:
+          other: Daľšie Items
+      admin:
+        items:
+          actions:
+            create_new: Pridať Item
+            reorder: Preusporiadať Items
+            reorder_done: Koniec radenia Items
+          records:
+            title: Items
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Items. Kliknite na "Pridať Item"
+              pre pridanie prvého item.
+          item:
+            read_item: Prečítať item
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          delete: Trvalo odstrániť item
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_items: Zatiaľ ste neobdržali žiadne items.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_items: Späť na všetky items
+            spam: Spam
+            spam_yes: "áno"
+            item: Item
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        settings:
+          notification_recipients_form:
+            settings_value_name: Poslať upozornenie pre
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky,
+              Refinery odošle e-mail s upozornením na nový category.
+            hint: Keď je odoslaný nový category, Refinery odošle upozornenie na Váš
+              e-mail.
+            example: 'Zadajte e-mailovú adresu(y) ako: jack@work.com, jill@office.com'
+          confirmation_email_form:
+            to: Komu
+            from: Od
+            subject: Predmet
+            click_to_edit_subject: Kliknite tu ak chcete upraviť predmet
+            explanation: Zakaždým, keď Vás niekto kontaktuje cez vaše webové stránky,
+              Refinery odošle e-mail s potvrdením o prijatí odosielateľovi category.
+            below_edit_email_sent: Nižšie môžete upraviť e-mail, ktorý je odosielaný.
+            the_customer_making_item: Klient robiť item
+            message: Správa
+            note: 'Poznámka: umiestniťe text %name%, pre určenie pozície mena klienta
+              v e-maile'
+            the_customer_making_author: Klient robiť author
+            the_customer_making_section: Klient robiť section
+            the_customer_making_tag: Klient robiť tag
+            the_customer_making_category: Klient robiť category
+        authors:
+          actions:
+            create_new: Pridať Author
+            reorder: Preusporiadať Authors
+            reorder_done: Koniec radenia Authors
+          records:
+            title: Authors
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Authors. Kliknite na "Pridať Author"
+              pre pridanie prvého author.
+          author:
+            read_author: Prečítať author
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          delete: Trvalo odstrániť author
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_authors: Zatiaľ ste neobdržali žiadne authors.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_authors: Späť na všetky authors
+            spam: Spam
+            spam_yes: "áno"
+            author: Author
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        sections:
+          actions:
+            create_new: Pridať Section
+            reorder: Preusporiadať Sections
+            reorder_done: Koniec radenia Sections
+          records:
+            title: Sections
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Sections. Kliknite na "Pridať Section"
+              pre pridanie prvého section.
+          section:
+            read_section: Prečítať section
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          delete: Trvalo odstrániť section
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_sections: Zatiaľ ste neobdržali žiadne sections.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_sections: Späť na všetky sections
+            spam: Spam
+            spam_yes: "áno"
+            section: Section
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        tags:
+          actions:
+            create_new: Pridať Tag
+            reorder: Preusporiadať Tags
+            reorder_done: Koniec radenia Tags
+          records:
+            title: Tags
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Tags. Kliknite na "Pridať Tag" pre
+              pridanie prvého tag.
+          tag:
+            read_tag: Prečítať tag
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          delete: Trvalo odstrániť tag
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_tags: Zatiaľ ste neobdržali žiadne tags.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_tags: Späť na všetky tags
+            spam: Spam
+            spam_yes: "áno"
+            tag: Tag
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+        categories:
+          actions:
+            create_new: Pridať Category
+            reorder: Preusporiadať Categories
+            reorder_done: Koniec radenia Categories
+          records:
+            title: Categories
+            sorry_no_results: "Ľutujeme, ale neboli nájdené žiadne výsledky."
+            no_items_yet: Nie sú vytvorené žiadne Categories. Kliknite na "Pridať
+              Category" pre pridanie prvého category.
+          category:
+            read_category: Prečítať category
+            said: povedal
+            mark_as_spam: Označiť ako spam
+            mark_as_ham: Označiť ako prečítané
+          delete: Trvalo odstrániť category
+          submenu:
+            inbox: Inbox
+            spam: Spam
+            update_notified: Upraviť zoznam notifikovaných
+            edit_confirmation_email: Upraviť potvrdzovací e-mail
+          index:
+            no_categories: Zatiaľ ste neobdržali žiadne categories.
+          spam:
+            no_spam: Hurá! Nemáte žiaden spam.
+          show:
+            details: Podrobnosti
+            age: Vek
+            actions: Akcie
+            back_to_all_categories: Späť na všetky categories
+            spam: Spam
+            spam_yes: "áno"
+            category: Category
+            to: Komu
+            from: Od
+            click_to_email: Kliknite pre odoslanie tejto adresy e-mailom
+            phone: Telefón
+            date: Dátum
+            message: Správa
+      mailer:
+        notification:
+          greeting: Ahoj
+          you_recieved_new_item: Práve ste obdržali nový item na vašej webové stránke.
+          item_starts: "--- item začiatok ---"
+          item_ends: "--- item koniec ---"
+          from: Od
+          email: E-mail
+          phone: Telefón
+          message: Správa
+          closing_line: S pozdravom
+          ps_html: P.S. Všetky vaše categories sú uložené v "Categories" sekcii v
+            Refinery, ak by ste ich chceli zobraziť neskôr.
+          you_recieved_new_author: Práve ste obdržali nový author na vašej webové
+            stránke.
+          author_starts: "--- author začiatok ---"
+          author_ends: "--- author koniec ---"
+          you_recieved_new_section: Práve ste obdržali nový section na vašej webové
+            stránke.
+          section_starts: "--- section začiatok ---"
+          section_ends: "--- section koniec ---"
+          you_recieved_new_tag: Práve ste obdržali nový tag na vašej webové stránke.
+          tag_starts: "--- tag začiatok ---"
+          tag_ends: "--- tag koniec ---"
+          you_recieved_new_category: Práve ste obdržali nový category na vašej webové
+            stránke.
+          category_starts: "--- category začiatok ---"
+          category_ends: "--- category koniec ---"
+      authors:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+        show:
+          other: Daľšie Authors
+      sections:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+        show:
+          other: Daľšie Sections
+      tags:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+        show:
+          other: Daľšie Tags
+      categories:
+        new:
+          send: Odoslať správu
+          privacy_policy: Chránime vaše súkromie
+        show:
+          other: Daľšie Categories
+  activerecord:
+    attributes:
+      refinery/blog/item:
+        title: Title
+        body: Body
+        image: Image
+        view_template: View Template
+        featured: Featured
+        author_id: Author
+        content_type: Content Type
+        view_count: View Count
+        slugify_title: Slugify Title
+        custom_slug: Custom Slug
+        published_at: Published At
+      refinery/blog/author:
+        last_name: Last Name
+        first_name: First Name
+        bio: Bio
+        email: Email
+        twitter_url: Twitter Url
+        facebook_url: Facebook Url
+        photo: Photo
+      refinery/blog/section:
+        slug: Slug
+      refinery/blog/tag:
+        title: Title
+      refinery/blog/category:
+        title: Title

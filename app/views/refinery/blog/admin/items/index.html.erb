@@ -1,0 +1,49 @@
+<% content_for :admin_content do %>
+	<section id='admin-page-content' class='admin-index container-fluid'>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="admin-title"><%= @items.index_title(@filters[:section], @filters[:tmpl]) %></h2>
+        <div class="text-center m-b-lg">
+          <a class="btn btn-default btn-round active" href="/admin/blog/articles"><i class="icon icon-feather"></i> <strong>Posts</strong></a>
+          <%= link_to '<i class="icon icon-sitemap"></i> <strong>Categories</strong>'.html_safe, refinery.blog_admin_categories_path, {class: "btn btn-default btn-round"}  %>
+          <%= link_to '<i class="icon icon-user icon-fe"></i> <strong>Authors</strong>'.html_safe, refinery.blog_admin_authors_path, {class: "btn btn-default btn-round"}  %>
+          <%= link_to '<i class="icon icon-tags"></i> <strong>Tags</strong>'.html_safe, refinery.blog_admin_tags_path, {class: "btn btn-default btn-round"}  %>
+        </div>
+        <% content_for :contextual_menu_right do %>
+          <div class="btn-group shrink-0 m-l-sm" role="group">
+            <button type="button" class="btn btn-default active"><i class="icon icon-pencil"></i> Drafts</button>
+            <button type="button" class="btn btn-default"><i class="icon icon-list"></i> All posts</button>
+          </div>
+          <div class="dropdown">
+            <button class="btn btn-link-gray" type="button" id="dropdown-filter" data-toggle="dropdown" aria-expanded="true">
+              <i class="icon icon-filter"></i> Filter by: <strong><%= @filters[:category].present? ? @filters[:category].title : 'All' %></strong> <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdown-filter">
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= refinery.filter_blog_admin_items_path(@filter_ids.merge({category_id: 'all'})) %>">All</a></li>
+              <li role="presentation"><a role="menuitem" tabindex="-1" href="<%= refinery.filter_blog_admin_items_path(@filter_ids.merge({category_id: 'all', featured: 'featured'})) %>">Featured</a></li>
+              <% Refinery::Blog::Category.get_all.each do |cat| %>
+                <li role="presentation">
+                  <a role="menuitem" tabindex="-1" href="<%= refinery.filter_blog_admin_items_path(@filter_ids.merge({category_id: cat.id})) %>">
+                    <%= cat.title %> <%= "(#{@items.in_category(cat.id).count})" if @filters[:category].blank? %>
+                  </a>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+
+          <a href="<%= @new_tmpl.present? ? refinery.new_tmpl_blog_admin_items_path(tmpl: @new_tmpl) : refinery.new_blog_admin_item_path %>" class="btn btn-primary">
+            <i class="icon icon-add"></i> <span class="hidden-xs-down"><strong>New <%= @new_tmpl.present? ? @new_tmpl : :article %></strong></span>
+          </a>
+        <% end %>
+
+        <%= render 'refinery/blog/admin/contextual_menu' %>
+      </div>
+      <div class="col-xs-12 index-listing">
+        <%= render 'records' %>
+      </div>
+    </div>
+	</section>
+  <%= render '/refinery/admin/make_sortable', options: {tree: false} if !searching? and ::Refinery::Blog::Admin::ItemsController.sortable? and ::Refinery::Blog::Item.many? %>
+
+<% end %>
+<%= render 'refinery/blog/admin/submenu' %>

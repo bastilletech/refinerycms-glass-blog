@@ -1,0 +1,9 @@
+<section class="index story-index steel-blue-bg">
+  <% if @items.featured.any? %>
+    <%= render partial: 'refinery/blog/items/story_carousel', locals: {items: @items.featured.limit(4) } %>
+  <% end %>
+
+  <section class="inverted-feed steel-blue-bg">
+    <%= render 'index_feed' %>
+  </section>
+</section>

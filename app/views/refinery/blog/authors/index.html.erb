@@ -1,0 +1,11 @@
+<% content_for :body do %>
+  <ul id="authors">
+    <% @authors.each do |author| %>
+      <li>
+        <%= link_to author.last_name, refinery.blog_author_path(author) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= render '/refinery/content_page' %>

@@ -1,0 +1,23 @@
+<% content_for :admin_content do %>
+	<section id='admin-page-content' class='admin-index container-fluid'>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2 class="admin-title"><%= t('.title') %></h2>
+
+        <% content_for :contextual_menu_right do %>
+          <a href="<%= refinery.new_blog_admin_category_path %>" class="btn btn-primary">
+            <i class="icon icon-add"></i> <span class="hidden-xs-down"><strong>New category</strong></span>
+          </a>
+        <% end %>
+
+        <%= render 'refinery/blog/admin/contextual_menu' %>
+      </div>
+      <div class="col-xs-12 index-listing">
+        <%= render 'records' %>
+      </div>
+    </div>
+	</section>
+  <%= render '/refinery/admin/make_sortable', options: {tree: false} if !searching? and ::Refinery::Blog::Admin::CategoriesController.sortable? and ::Refinery::Blog::Category.many? %>
+
+<% end %>
+<%= render 'refinery/blog/admin/submenu' %>

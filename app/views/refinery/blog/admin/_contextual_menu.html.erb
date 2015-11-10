@@ -1,0 +1,21 @@
+<div class="contextual-menu">
+  <% if !searching? && ::Refinery::Blog::Admin::CategoriesController.sortable? && ::Refinery::Blog::Category.many? %>
+    <button id='reorder_action' class="btn btn-link-gray">
+      <i class="icon icon-reorder bump-down"></i> <strong><%= t('reorder',      :scope => 'refinery.admin.search') %></strong>
+    </button>
+    <button id='reorder_action_done' class="btn btn-link-gray" style="display: none;">
+      <i class="icon icon-reorder bump-down"></i> <strong><%= t('reorder_done', :scope => 'refinery.admin.search') %></strong>
+    </button>
+  <% end %>
+
+  <% if ::Refinery::Blog::Admin::ItemsController.searchable? %>
+    <%= render '/refinery/admin/search', :url => refinery.blog_admin_items_path %>
+  <% end %>
+
+  <%# link_to '<i class="icon icon-index"></i> <strong>Categories</strong>'.html_safe, refinery.blog_admin_categories_path, {class: "btn btn-default"}  %>
+  <%# link_to '<i class="icon icon-group"></i> <strong>Authors</strong>'.html_safe, refinery.blog_admin_authors_path, {class: "btn btn-default"}  %>
+  <%# link_to '<i class="icon icon-index"></i> <strong>Tags</strong>'.html_safe, refinery.blog_admin_tags_path, {class: "btn btn-default"}  %>
+  <%# link_to '<i class="icon icon-index"></i> <strong>Sections</strong>'.html_safe, refinery.blog_admin_sections_path, {class: "btn btn-default"}  %>
+
+  <%= yield :contextual_menu_right %>
+</div>
