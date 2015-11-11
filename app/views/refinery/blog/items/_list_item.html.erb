@@ -27,7 +27,7 @@
         <div class="blog-footer flex align-items-center">
           <a class="btn-link flex align-items-center " href="<%= list_item.author.present? ? refinery.blog_author_path(list_item.author) : '#'%>">
             <div class="avatar m-r shrink-0">
-              <img class="img-circle img-responsive" src="<%= list_item.author_photo_url('45x45#') %>">
+              <img class="img-circle img-fluid" src="<%= list_item.author_photo_url('45x45#') %>">
             </div>
             <span class="author m-r ellipsis"><%= list_item.author.present? ? list_item.author.full_name : 'Anonymous'%></span>
           </a>

@@ -18,7 +18,7 @@
     <% else %>
       <a class="card-footer flex p-y-sm" href="<%= card.author.present? ? refinery.blog_author_path(card.author) : '#'%>">
         <div class="avatar m-r-sm">
-          <img class="img-circle img-responsive" src="<%= card.author_photo_url('45x45#') %>">
+          <img class="img-circle img-fluid" src="<%= card.author_photo_url('45x45#') %>">
         </div>
         <div class="card-meta">
           <p class="small author m-b-0"><%= card.author.present? ? card.author.full_name : 'Anonymous'%></p>
